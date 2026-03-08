@@ -1,0 +1,16 @@
+/* content */
+
+.content{
+    flex: 1;
+    max-width: 800px;
+    padding: 40px;
+    margin-left: 50px;
+}
+
+.content h2{
+    margin-top: 40px;
+    font-size: 26px;
+}
+.content ul{
+    margin-top: 10px;
+}

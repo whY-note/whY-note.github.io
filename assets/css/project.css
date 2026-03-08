@@ -1,0 +1,21 @@
+/* project */
+
+.project-grid{
+
+    display:grid;
+    
+    grid-template-columns:repeat(2,1fr);
+    
+    gap:20px;
+    
+    }
+    
+    .project-card{
+    
+    border:1px solid #eee;
+    
+    padding:20px;
+    
+    border-radius:8px;
+    
+}

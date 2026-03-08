@@ -3,33 +3,58 @@
 <aside class="sidebar">
     <img src="/assets/images/avatar.jpg" class="avatar">
     
-    <h2> {{ profile.name }} | {{profile.chinese_name }} </h2>
+    <h2 class="name"> {{ profile.name }} | {{profile.chinese_name }} </h2>
     
     <p class="bio">
         {{ profile.bio }}
     </p>
 
     <ul class="info">
-        <li> {{ profile.location }} </li>
-        <li> {{ profile.university }} </li> 
-        <!-- <li> {{ profile.email }} </li> -->
+        <li> 
+            <i 
+            class="fa-solid fa-magnifying-glass"
+            style="color:#e63946;"
+            ></i>
+            {{ profile.interests }} 
+        </li>
+        <li> 
+            <i 
+            class="fa-solid fa-location-dot"
+            style="color:#2a9d8f;"
+            ></i>
+            {{ profile.location }} 
+        </li>
+        <li> 
+            <i 
+            class="fa-solid fa-building-columns"
+            style="color:#6a4c93;"
+            ></i>
+            {{ profile.university }} 
+        </li> 
         <li>
-            <a href="mailto:{{ profile.social.email }}">
-            <i class="fa-solid fa-envelope"></i> {{ profile.social.email }}
+            <a href="mailto:{{ profile.email }}">
+            <i 
+            class="fa-solid fa-envelope"
+            style="color:#f4a261;"
+            ></i> {{ profile.email }}
             </a>
         </li>
         
         <li>
-        <a href="{{ profile.socical.github }}">
-            <i class="fa-brands fa-github"></i>
-            Github
-        </a>
+            <a href="{{ profile.github }}">
+                <i 
+                class="fa-brands fa-github"
+                style="color:#333;"
+                ></i> Github
+            </a>
         </li>
         
         <li>
-            <a href="{{ profile.socical.Google_Scholar }}">
-                <i class="fa-solid fa-graduation-cap"></i>
-                Google Scholar
+            <a href="{{ profile.google_scholar }}">
+                <i class="fa-solid fa-graduation-cap"
+                style="color:#4285f4;"
+                ></i>
+                Google Scholar: pending
             </a>
         </li>
     </ul>

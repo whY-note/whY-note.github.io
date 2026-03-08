@@ -1,0 +1,16 @@
+/* publication */
+
+.publication{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.publication-img{
+    width: 120px;
+    margin-right: 20px;
+}
+
+.publication-text h3{
+    margin: 0;
+    font-size: 18px;
+}

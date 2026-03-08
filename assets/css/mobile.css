@@ -1,0 +1,19 @@
+/* auto-mobile */
+
+@media (max-width:800px){
+
+    .container{
+    
+    flex-direction:column;
+    
+    }
+    
+    .sidebar{
+    
+    width:100%;
+    
+    border-right:none;
+    
+    }
+    
+}

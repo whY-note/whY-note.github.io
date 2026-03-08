@@ -1,0 +1,24 @@
+/* the top navigation  */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding:15px 40px;
+
+    /* background:#82318E; */
+    background: linear-gradient(to right, #621EC3, #2D21E4);;
+    color: white;
+}
+
+.navbar a{
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* 当navbar的按键被按下时的响应：加下划线 */
+.navbar a:hover{ 
+    text-decoration: underline;
+}

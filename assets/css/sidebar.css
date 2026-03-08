@@ -1,0 +1,58 @@
+/* left sidebar */
+.sidebar{
+    width: 250px;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #eee;
+}
+
+.avatar{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.name{
+    font-family: "Times New Roman", Times, serif;
+    /* font-family: Georgia, "Times New Roman", serif; */
+
+    font-size: 23px;
+}
+
+.bio{
+    color: #666;
+    margin:15px 0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+}
+
+.info{
+    list-style: none;
+    padding: 0;
+}
+
+.info li{
+    margin: 10px 0;
+    margin-bottom: 8px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+}
+
+.info i{
+    width: 20px;
+    margin-right: 8px;
+}
+
+.info a{
+    text-decoration: none;
+    color: #333;
+}
+
+.info a:hover{
+    color: #4639fb;
+}

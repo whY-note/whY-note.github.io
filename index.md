@@ -3,13 +3,26 @@ layout: default
 title: home
 ---
 
-# Welcome
+v1.1
 
-v0.1
 
-This is my homepage.
+# Biography
+Hi! I am Haowen Yan, an undergraduate student majoring in Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/). 
+Currently, I am a research intern at [Xspark-AI](https://github.com/XsparkAI). I am also privileged to intern at [TEA Lab](https://github.com/TEA-Lab) under the supervision of Prof. [Huazhe Xu](http://hxu.rocks/), where I worked on **teleoperation**. During my undergraduate studies, I was also fortunate to be mentored by Prof. [Gang Chen](https://cse.sysu.edu.cn/teacher/Chengang), working on **optimal control and UAV**.
 
-## Publications
+My research interests mainly include **Embodied AI**, **robotics**, **reinforcement learning** and **optimal control**. 
+
+My long-term research goal is to develop robotic systems capable of operating in complex and hazardous environments, such as fire or earthquake scenarios, to assist in rescue missions and ultimately benefit society and our humanity.
+
+Beyond research, I am also passionate about Chinese calligraphy.
+
+Feel free to reach out if you are interested in collaboration.
+
+# News
+
+Coming soon ...
+
+# Publications
 
 {% for publication in site.data.pubications %}
 
@@ -33,7 +46,7 @@ This is my homepage.
 
 {% endfor %}
 
-## Projects
+# Projects
 
 <div class="project-grid">
 
@@ -52,3 +65,15 @@ This is my homepage.
 {% endfor %}
 
 </div>
+
+# Education
+
+Coming soon ...
+
+# Awards
+
+Coming soon ...
+
+# Contact Me
+
+Coming soon ...
