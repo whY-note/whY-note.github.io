@@ -2,22 +2,30 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
   <title>{{ page.title }}</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<header>
-  <h1>My Website</h1>
-</header>
+{% include header.html %}
 
-<main>
-{{ content }}
-</main>
+<div class="container">
+    <!-- left sidebar -->
+    {% include sidebar.html %}
 
-<footer>
-  Copyright 2026
-</footer>
+    <!-- content at the right -->
+    <main class="content">
+        {{content}}
+    </main>
+</div>
+
+{% include footer.html %}
+
 
 </body>
 </html>

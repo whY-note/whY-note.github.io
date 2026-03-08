@@ -1,0 +1,37 @@
+{% assign profile = site.data.profile %}
+
+<aside class="sidebar">
+    <img src="/assets/images/avatar.jpg" class="avatar">
+    
+    <h2> {{ profile.name }} | {{profile.chinese_name }} </h2>
+    
+    <p class="bio">
+        {{ profile.bio }}
+    </p>
+
+    <ul class="info">
+        <li> {{ profile.location }} </li>
+        <li> {{ profile.university }} </li> 
+        <!-- <li> {{ profile.email }} </li> -->
+        <li>
+            <a href="mailto:{{ profile.social.email }}">
+            <i class="fa-solid fa-envelope"></i> {{ profile.social.email }}
+            </a>
+        </li>
+        
+        <li>
+        <a href="{{ profile.socical.github }}">
+            <i class="fa-brands fa-github"></i>
+            Github
+        </a>
+        </li>
+        
+        <li>
+            <a href="{{ profile.socical.Google_Scholar }}">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Google Scholar
+            </a>
+        </li>
+    </ul>
+
+</aside>

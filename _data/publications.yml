@@ -1,0 +1,12 @@
+# example
+- title: Decomposed Object Manipulation via Dual-Actor Policy
+  authors: Bin Fan, Jianjian Jiang, Haowen Yan
+  venue: arXiv 2025
+  pdf: /papers/paper1.pdf
+  image: /assets/images/paper1.png
+
+- title: Efficient Policy Learning for Robotics
+  authors: Haowen Yan, Others
+  venue: ICRA 2026
+  pdf: /papers/paper2.pdf
+  image: /assets/images/paper2.png

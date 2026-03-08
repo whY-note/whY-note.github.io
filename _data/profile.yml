@@ -1,0 +1,20 @@
+# _config.yml
+
+
+name: Haowen Yan
+chinese_name: 严浩文
+bio: I love robotics and AI.
+
+location: Guangdong, China
+university: Sun Yat-Sen University
+
+avatar: /assets/images/avatar.jpg
+
+social:
+  - email: yanhw7@mail2.sysu.edu.cn
+  
+  - github: https://github.com/whY-note
+
+  - Google_Scholar: https://scholar.google.com
+
+    

@@ -1,16 +1,141 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+}
+
+/* the top navigation  */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding:15px 40px;
+
+    background:#82318E;
+
     color: white;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  section {
+}
+
+.navbar a{
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* 当navbar的按键被按下时的响应：加下划线 */
+.navbar a:hover{ 
+    text-decoration: underline;
+}
+
+/* 左右布局 */
+
+.container{
+    display: flex;
+    display: 1200px;
+    margin: auto;
+}
+
+/* left sidebar */
+.sidebar{
+    width: 300px;
+    padding: 30px;
+    border-right: 1px solid #eee;
+}
+
+.avatar{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.bio{
+    color: #666;
+    margin:15px 0;
+}
+
+.info{
+    list-style: none;
+    padding: 0;
+}
+.info li{
+    margin: 10px 0;
+}
+
+/* content at the right  */
+.content{
+    flex: 1;
     padding: 40px;
-  }
+}  
+
+.content h2{
+    margin-top: 40px;
+    font-size: 26px;
+}
+.content ul{
+    margin-top: 10px;
+}
+
+/* publication */
+.publication{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.publication-img{
+    width: 120px;
+    margin-right: 20px;
+}
+
+.publication-text h3{
+    margin: 0;
+    font-size: 18px;
+}
+
+/* project */
+
+.project-grid{
+
+    display:grid;
+    
+    grid-template-columns:repeat(2,1fr);
+    
+    gap:20px;
+    
+    }
+    
+    .project-card{
+    
+    border:1px solid #eee;
+    
+    padding:20px;
+    
+    border-radius:8px;
+    
+}
+
+
+/* auto-mobile */
+@media (max-width:800px){
+
+    .container{
+    
+    flex-direction:column;
+    
+    }
+    
+    .sidebar{
+    
+    width:100%;
+    
+    border-right:none;
+    
+    }
+    
+}
