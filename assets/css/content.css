@@ -5,6 +5,12 @@
     max-width: 800px;
     padding: 40px;
     margin-left: 50px;
+
+    overflow-y: auto;
+}
+
+.content::-webkit-scrollbar{ 
+    width:6px;
 }
 
 .content h2{

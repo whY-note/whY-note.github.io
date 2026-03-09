@@ -5,6 +5,13 @@
     padding-left: 10px;
     padding-right: 10px;
     border-right: 1px solid #eee;
+
+    overflow-y: auto;
+}
+
+/* 隐藏 sidebar的滚动条，但是可以保持滚动 */
+.sidebar::-webkit-scrollbar{ 
+    width:6px;
 }
 
 .avatar{
