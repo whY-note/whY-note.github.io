@@ -5,6 +5,8 @@ import all .css files here
 @import "global.css";
 @import "navbar.css";
 @import "sidebar.css";
+@import "content_wrapper.css";
+@import "image_bar.css";
 @import "content.css";
 @import "publication.css";
 @import "project.css";

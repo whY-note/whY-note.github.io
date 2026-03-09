@@ -3,8 +3,11 @@ layout: default
 title: Home
 ---
 
-v1.3
+v1.3: 
 left sidebar and right content can scroll independently, and all content can appear while scroll.
+
+v1.4: 
+add image bar at the top of right content
 
 <section data-aos="fade-up" markdown="1">
 

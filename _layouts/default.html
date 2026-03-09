@@ -20,11 +20,25 @@
     <!-- left sidebar -->
     {% include sidebar.html %}
 
-    <!-- content at the right -->
-    <main class="content">
-        {{content}}
-
-    </main>
+    <!-- content wrapper at the right -->
+    <div class="content-wrapper">
+        <!-- content -->
+        <main class="content" id="contentMain">
+            <!-- image bar -->
+            <div class="image-bar">
+                <div class="image-carousel" id="imageCarousel">
+                    {% for image in site.data.image_bar.images %}
+                        <img src="{{ image }}" alt="carousel-image">
+                    {% endfor %}
+                    {% for image in site.data.image_bar.images %}
+                        <img src="{{ image }}" alt="carousel-image">
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- main content (from md)-->
+            {{content}}
+        </main>
+    </div>
 </div>
 
 <!-- AOS JS -->
@@ -39,9 +53,35 @@
     startEvent: 'load'
   });
 
-  // 手动监听 .content 容器的滚动事件
+  // 轮播图片动画
   document.addEventListener('DOMContentLoaded', function() {
-    const contentEl = document.querySelector('.content'); // 监听 .content 容器的滚动
+    const carousel = document.getElementById('imageCarousel');
+    if (carousel) {
+      const images = carousel.querySelectorAll('img');
+      const imageCount = images.length / 2;  // 因为做了两次循环
+      
+      if (imageCount > 0) {
+        // 计算每张图片所需的宽度
+        const imageWidth = carousel.offsetWidth / imageCount;
+        const speed = 0.02;  // 每帧移动像素数
+        let offset = 0;
+        
+        function animate() {
+          offset -= speed;
+          // 当移动到一半时（图片重复处），重置位置
+          if (Math.abs(offset) >= imageWidth * imageCount) {
+            offset = 0;
+          }
+          carousel.style.transform = `translateX(${offset}px)`;
+          requestAnimationFrame(animate);
+        }
+        
+        animate();
+      }
+    }
+
+    // 手动监听 .content 容器的滚动事件
+    const contentEl = document.querySelector('.content');
     if (contentEl) {
       // 监听滚动并手动触发 AOS 检测
       contentEl.addEventListener('scroll', function() {

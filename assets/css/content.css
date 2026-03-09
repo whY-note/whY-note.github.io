@@ -1,16 +1,25 @@
 /* content */
 
-.content{
+#contentMain {
     flex: 1;
     max-width: 800px;
-    padding: 40px;
     margin-left: 50px;
-
-    overflow-y: auto;  /* 独立滚动 */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    padding-top: 0;  /* image-bar 在顶部，不需要顶部 padding */
 }
 
-.content::-webkit-scrollbar{ 
-    width:6px;
+#contentMain::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* image-bar 抵消外层 padding */
+#contentMain > .image-bar {
+    margin-left: -40px;
+    margin-right: -40px;
+    width: calc(100% + 80px);
 }
 
 .content h2{
