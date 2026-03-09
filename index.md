@@ -1,15 +1,17 @@
 ---
 layout: default
-title: home
+title: Home
 ---
 
-v1.2
+v1.3
+left sidebar and right content can scroll independently, and all content can appear while scroll.
 
+<section data-aos="fade-up" markdown="1">
 
-# About Me 
+# About Me
 
 Hi! I am Haowen Yan, an undergraduate student majoring in Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/). 
-Currently, I am a research intern at [Xspark-AI](https://github.com/XsparkAI). I am also privileged to intern at [TEA Lab](https://github.com/TEA-Lab) under the supervision of Prof. [Huazhe Xu](http://hxu.rocks/), where I worked on **teleoperation**. During my undergraduate studies, I was also fortunate to be mentored by Prof. [Gang Chen](https://cse.sysu.edu.cn/teacher/Chengang), working on **optimal control and UAV**.
+Currently, I am a research intern at [Xspark AI](https://github.com/XsparkAI). I am also privileged to intern at [TEA Lab](https://github.com/TEA-Lab) under the supervision of Prof. [Huazhe Xu](http://hxu.rocks/), where I worked on **teleoperation**. During my undergraduate studies, I was also fortunate to be mentored by Prof. [Gang Chen](https://cse.sysu.edu.cn/teacher/Chengang), working on **optimal control and UAV**.
 
 My research interests mainly include **Embodied AI**, **robotics**, **reinforcement learning** and **optimal control**. 
 
@@ -19,13 +21,51 @@ Beyond research, I am also passionate about Chinese calligraphy.
 
 Feel free to reach out if you are interested in collaboration.
 
+</section>
+
+<section data-aos="fade-up" markdown="1">
+
 # News
 
 Coming soon ...
 
+Coming soon ...
+
+</section>
+
+
+<section data-aos="fade-up" markdown="1">
+
+# Education
+
+Coming soon ...
+
+</section>
+
+
+<section data-aos="fade-up" markdown="1">
+
+# Awards
+
+Coming soon ...
+
+</section>
+
+
+<section data-aos="fade-up" markdown="1">
+
+# Contact Me
+
+Coming soon ...
+
+</section>
+
+
+<!-- <div data-aos="fade-up" markdown="1">
+
 # Publications
 
-{% for publication in site.data.pubications %}
+{% for publication in site.data.publications %}
 
 <div class="publication">
 
@@ -47,6 +87,11 @@ Coming soon ...
 
 {% endfor %}
 
+</div> -->
+
+<!-- 
+<div data-aos="fade-up" markdown="1">
+
 # Projects
 
 <div class="project-grid">
@@ -66,15 +111,4 @@ Coming soon ...
 {% endfor %}
 
 </div>
-
-# Education
-
-Coming soon ...
-
-# Awards
-
-Coming soon ...
-
-# Contact Me
-
-Coming soon ...
+</div> -->

@@ -6,7 +6,7 @@
     padding: 40px;
     margin-left: 50px;
 
-    overflow-y: auto;
+    overflow-y: auto;  /* 独立滚动 */
 }
 
 .content::-webkit-scrollbar{ 

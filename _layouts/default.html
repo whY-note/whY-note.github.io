@@ -6,8 +6,10 @@
   <title>{{ page.title }}</title>
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 
 <body>
@@ -21,8 +23,44 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     <!-- content at the right -->
     <main class="content">
         {{content}}
+
     </main>
 </div>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  // 初始化 AOS，禁用默认的窗口滚动监听
+  AOS.init({
+    duration: 800,
+    once: true,
+    disable: 'mobile',
+    startEvent: 'load'
+  });
+
+  // 手动监听 .content 容器的滚动事件
+  document.addEventListener('DOMContentLoaded', function() {
+    const contentEl = document.querySelector('.content'); // 监听 .content 容器的滚动
+    if (contentEl) {
+      // 监听滚动并手动触发 AOS 检测
+      contentEl.addEventListener('scroll', function() {
+        document.querySelectorAll('[data-aos]').forEach(function(el) {
+          const rect = el.getBoundingClientRect();
+          const contentRect = contentEl.getBoundingClientRect();
+          
+          // 检查元素是否在 content 容器的可视区域内
+          if (rect.top < contentRect.bottom && rect.bottom > contentRect.top) {
+            el.classList.add('aos-animate');
+          }
+        });
+      });
+      
+      // 初始触发一次，显示首屏内容
+      contentEl.dispatchEvent(new Event('scroll'));
+    }
+  });
+</script>
 
 {% include footer.html %}
 
