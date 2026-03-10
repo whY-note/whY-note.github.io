@@ -44,9 +44,11 @@ https://whY-note.github.io
 - [ ] 根据academicpages，完善所含有的内容
 - [x] 添加滚动渐渐出现的效果
 - [x] 解决imagebar不能移动的问题 -->现在imagebar里面的图像可以左移或者右移，只需要改参数`direction`
+- [x] 写一个Python脚本，从 `assets/images/image_bar/` 中读取所有图片，然后写入 `_data/image_bar.yml`中
 - [ ] 添加个人logo
 - [ ] 添加开头视频
 - [ ] navbar加搜索
+- [ ] 屏幕大小变化时，要自适应地**居中**
 
 ## 完成情况
 - [x] sidebar
