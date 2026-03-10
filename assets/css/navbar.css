@@ -10,8 +10,8 @@
     /* background:#82318E; */
     background: linear-gradient(to right, #621EC3, #2D21E4);;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25pxs;
+
+    font-size: 20px;
 }
 
 .navbar a{
