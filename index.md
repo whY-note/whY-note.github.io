@@ -3,15 +3,6 @@ layout: default
 title: Home
 ---
 
-v1.3: 
-left sidebar and right content can scroll independently, and all content can appear while scroll.
-
-v1.4: 
-add image bar at the top of right content
-
-v1.5:
-image bar can scroll and add a python file to read all images into the image_bar.yml
-
 <section data-aos="fade-up" markdown="1">
 
 # About Me
@@ -33,9 +24,14 @@ Feel free to reach out if you are interested in collaboration.
 
 # News
 
-Coming soon ...
+v1.3: 
+left sidebar and right content can scroll independently, and all content can appear while scroll.
 
-Coming soon ...
+v1.4: 
+add image bar at the top of right content
+
+v1.5:
+image bar can scroll and add a python file to read all images into the image_bar.yml
 
 </section>
 
