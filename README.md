@@ -50,6 +50,7 @@ https://whY-note.github.io
 
 ## 完成情况
 - [x] sidebar
+- [x] imagebar
 - [ ] navbar
 - [x] About me
 - [ ] publications

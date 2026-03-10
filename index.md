@@ -10,7 +10,7 @@ v1.4:
 add image bar at the top of right content
 
 v1.5:
-image bar can scroll!
+image bar can scroll and add a python file to read all images into the image_bar.yml
 
 <section data-aos="fade-up" markdown="1">
 
