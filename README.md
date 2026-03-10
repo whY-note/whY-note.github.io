@@ -40,6 +40,7 @@ https://whY-note.github.io
 - [x] sidebar加图标
 - [x] 左边sidebar与右边content的滚动是独立的，分开的，一边动，另一边不会动
 - [ ] 解决publications不出现的问题
+- [ ] 添加project，并链接到Github
 - [x] github,scholar的图标
 - [ ] 根据academicpages，完善所含有的内容
 - [x] 添加滚动渐渐出现的效果
