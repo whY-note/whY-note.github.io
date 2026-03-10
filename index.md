@@ -9,6 +9,9 @@ left sidebar and right content can scroll independently, and all content can app
 v1.4: 
 add image bar at the top of right content
 
+v1.5:
+image bar can scroll!
+
 <section data-aos="fade-up" markdown="1">
 
 # About Me

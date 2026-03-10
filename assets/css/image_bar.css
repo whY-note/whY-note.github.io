@@ -8,6 +8,7 @@
     overflow: hidden;
     flex-shrink: 0;  /* image-bar 不缩放 */
     margin-bottom: 20px;  /* 与内容之间的间距 */
+    padding-top: 10px; /* 上边距 */
 }
 
 .image-carousel {

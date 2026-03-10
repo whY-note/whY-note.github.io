@@ -43,6 +43,7 @@ https://whY-note.github.io
 - [x] github,scholar的图标
 - [ ] 根据academicpages，完善所含有的内容
 - [x] 添加滚动渐渐出现的效果
+- [x] 解决imagebar不能移动的问题 -->现在imagebar里面的图像可以左移或者右移，只需要改参数`direction`
 - [ ] 添加个人logo
 - [ ] 添加开头视频
 - [ ] navbar加搜索
