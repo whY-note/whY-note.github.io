@@ -26,7 +26,8 @@ permalink: /projects/
 
     <div class="project-meta">
         <a class="project-link" href="{{ project.url }}">
-            <i class="fa-brands fa-github" aria-hidden="true"></i> Github
+            <i class="fa-brands fa-github" aria-hidden="true"></i> 
+            Code
         </a>
 
         <!-- only if project.stars > 0, the number of stars will be shown here -->

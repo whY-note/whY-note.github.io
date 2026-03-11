@@ -49,7 +49,7 @@ https://whY-note.github.io
 - [x] 解决imagebar不能移动的问题 -->现在image bar里面的图像可以左移或者右移，只需要改参数`direction`
 - [x] 写一个Python脚本，从 `assets/images/image_bar/` 中读取所有图片，然后写入 `_data/image_bar.yml`中
 - [ ] 把image bar 里面的图片像素降低
-- [ ] 按键的形式优化
+- [ ] 优化按键的形式
 - [ ] 添加个人logo
 - [ ] 添加开头视频
 - [ ] navbar加搜索
@@ -64,4 +64,6 @@ https://whY-note.github.io
 - [ ] footer
 - [ ] publications
 - [x] projects
+- [ ] theme
+- [ ] CH/EN
 - [ ] Blog

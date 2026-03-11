@@ -39,6 +39,9 @@ layout is center now, and projects finished!
 v1.7:
 add theme (especially in background)
 
+v1.8:
+change the style of project-card background.
+
 </section>
 
 
@@ -78,6 +81,7 @@ add theme (especially in background)
 
 <div class="project-grid">
 
+<!-- Only show the top 4 -->
 {% for project in site.data.projects limit:4 %}
 
     <div class="project-card">
@@ -86,7 +90,20 @@ add theme (especially in background)
 
     <p>{{ project.description }}</p>
 
-    <a href="{{ project.url }}">Code</a>
+    <div class="project-meta">
+        <a class="project-link" href="{{ project.url }}">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> 
+            Code
+        </a>
+
+        <!-- only if project.stars > 0, the number of stars will be shown here -->
+        {% if project.stars and project.stars > 0 %}
+        <span class="project-stars">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            {{ project.stars }}
+        </span>
+        {% endif %}
+    </div>
 
     </div>
 
