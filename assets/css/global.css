@@ -12,10 +12,16 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    
-    overflow: hidden;  /* 禁用页面整体滚动 */
 
-    
+    overflow: hidden;  /* 页面滚动交给内部内容区域 */
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
 }
 
 /* 链接 */
@@ -35,7 +41,8 @@ a:hover{
 .container{
     display: flex;
     width: 100%;
-    height: calc(100vh - 60px);  /* 固定高度，让内部元素各自滚动 */
+    flex: 1;
+    min-height: 0;
 
     max-width: 1300px;
     margin-left: auto;

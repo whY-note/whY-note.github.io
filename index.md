@@ -42,6 +42,9 @@ add theme (especially in background)
 v1.8:
 change the style of project-card background.
 
+v1.9:
+footer finish!
+
 </section>
 
 

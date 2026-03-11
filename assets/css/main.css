@@ -7,6 +7,7 @@ import all .css files here
 @import "sidebar.css";
 @import "content_wrapper.css";
 @import "image_bar.css";
+@import "footer.css";
 @import "content.css";
 @import "publication.css";
 @import "project.css";

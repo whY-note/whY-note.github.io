@@ -1,0 +1,45 @@
+/* footer */
+
+.footer {
+  width: min(1100px, calc(100% - 2rem));
+  margin-top: 2.0rem;
+  margin-bottom: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #030d76;
+  font-size: 0.9rem;
+  text-align: left;
+  border-top: 1px solid #030d76;
+  padding-top: 0.8rem;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.footer-title {
+  margin: 0;
+  color: #030d76;
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+}
+
+.footer-link {
+  color: #030d76;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.footer-note {
+  margin: 0;
+}
