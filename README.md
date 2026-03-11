@@ -39,8 +39,9 @@ https://whY-note.github.io
 - [x] 导航栏做成渐变色（仿清华的紫色变蓝色）
 - [x] sidebar加图标
 - [x] 左边sidebar与右边content的滚动是独立的，分开的，一边动，另一边不会动
+- [ ] 背景用星空图
 - [ ] 解决publications不出现的问题
-- [ ] 添加project，并链接到Github
+- [x] 添加project，并链接到Github
 - [x] github,scholar的图标
 - [ ] 根据academicpages，完善所含有的内容
 - [x] 添加滚动渐渐出现的效果
@@ -50,13 +51,15 @@ https://whY-note.github.io
 - [ ] 添加个人logo
 - [ ] 添加开头视频
 - [ ] navbar加搜索
-- [ ] 屏幕大小变化时，要自适应地**居中**
+- [x] 屏幕大小变化时，要自适应地**居中**
+- [ ] 检索优化
 
 ## 完成情况
 - [x] sidebar
 - [x] imagebar
 - [ ] navbar
 - [x] About me
+- [ ] footer
 - [ ] publications
 - [ ] projects
 - [ ] Blog

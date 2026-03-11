@@ -1,17 +1,19 @@
 /* the top navigation  */
 
 .navbar{
+    background: linear-gradient(to right, #621EC3, #2D21E4);
+    color: white;
+    font-size: 20px;
+}
+
+.navbar-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding:15px 40px;
-
-    /* background:#82318E; */
-    background: linear-gradient(to right, #621EC3, #2D21E4);;
-    color: white;
-
-    font-size: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 40px;
 }
 
 .navbar a{

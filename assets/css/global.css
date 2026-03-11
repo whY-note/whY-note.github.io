@@ -17,6 +17,10 @@ html, body {
 
     background: #fafafa;
 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* 链接 */
@@ -35,10 +39,11 @@ a:hover{
   
 .container{
     display: flex;
+    width: 100%;
     height: calc(100vh - 60px);  /* 固定高度，让内部元素各自滚动 */
 
-    max-width: 1200px;
-    margin-left: 30px;
+    max-width: 1300px;
+    margin-left: auto;
     margin-right: auto;
 }
   

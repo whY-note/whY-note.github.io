@@ -1,7 +1,24 @@
-- title: RoboArena
-  description: Benchmark for embodied AI
-  url: https://github.com/robo-arena
+- title: Note-Library
+  description: 本项目分享了本人在中山大学计算机学院就读期间的部分学习笔记，以及一些我自己拓展学习的知识笔记。
+  url: https://github.com/whY-note/Note-Library
+  stars: 1
 
-- title: Policy Server
-  description: High performance policy inference system
-  url: https://github.com/whY-note
+- title: ML-Lab
+  description: Code for Machine Learning experiments in SYSU
+  url: https://github.com/whY-note/ML-Lab
+  stars: 0
+
+- title: PipelineCPU
+  description: A pipelined CPU implemented in a Computer Organization lab
+  url: https://github.com/whY-note/PipelineCPU
+  stars: 0
+
+- title: Diffusion-DDIM
+  description: DDIM implemented DPM-solver and v-predicition and trained models on smithsonian butterflies subset.
+  url: https://github.com/whY-note/diffusion-DDIM-pytorch
+  stars: 0
+
+- title: AI-Lab
+  description: Code for AI course experiments
+  url: https://github.com/whY-note/AI-Lab
+  stars: 0

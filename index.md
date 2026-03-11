@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 
@@ -33,37 +33,14 @@ add image bar at the top of right content
 v1.5:
 image bar can scroll and add a python file to read all images into the image_bar.yml
 
-</section>
-
-
-<section data-aos="fade-up" markdown="1">
-
-# Education
-
-Coming soon ...
+v1.6:
+layout is center now, and projects finished!
 
 </section>
 
 
-<section data-aos="fade-up" markdown="1">
-
-# Awards
-
-Coming soon ...
-
-</section>
-
-
-<section data-aos="fade-up" markdown="1">
-
-# Contact Me
-
-Coming soon ...
-
-</section>
-
-
-<!-- <div data-aos="fade-up" markdown="1">
+<!---------- Publications ------------>
+<!-- <section data-aos="fade-up" markdown="1">
 
 # Publications
 
@@ -89,16 +66,16 @@ Coming soon ...
 
 {% endfor %}
 
-</div> -->
+</section> -->
 
-<!-- 
-<div data-aos="fade-up" markdown="1">
+<!---------- Projects ------------>
+<section data-aos="fade-up" markdown="1">
 
-# Projects
+# Projects 
 
 <div class="project-grid">
 
-{% for project in site.data.projects %}
+{% for project in site.data.projects limit:4 %}
 
     <div class="project-card">
 
@@ -113,4 +90,38 @@ Coming soon ...
 {% endfor %}
 
 </div>
-</div> -->
+
+<a href="/projects/" class="more-btn">More →</a>
+
+</section>
+
+
+<!---------- Education ------------>
+<section data-aos="fade-up" markdown="1">
+
+# Education
+
+Coming soon ...
+
+</section>
+
+
+<!---------- Awards ------------>
+<section data-aos="fade-up" markdown="1">
+
+# Awards
+
+Coming soon ...
+
+</section>
+
+<!---------- Contact Me ------------>
+<section data-aos="fade-up" markdown="1">
+
+# Contact Me
+
+Coming soon ...
+
+</section>
+
+

@@ -18,14 +18,14 @@
 
 <div class="container">
     <!-- left sidebar -->
-    <!-- {% include sidebar.html %} -->
+    {% include sidebar.html %}
 
     <!-- content wrapper at the right -->
     <div class="content-wrapper">
         <!-- content -->
         <main class="content" id="contentMain">
             <!-- image bar -->
-            <!-- <div class="image-bar">
+            <div class="image-bar">
                 <div class="image-carousel" id="imageCarousel">
                     {% for image in site.data.image_bar.images %}
                         <img src="{{ image }}" alt="carousel-image">
@@ -34,7 +34,7 @@
                         <img src="{{ image }}" alt="carousel-image">
                     {% endfor %}
                 </div>
-            </div> -->
+            </div>
             <!-- main content (from md)-->
             {{content}}
         </main>
