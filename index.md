@@ -36,6 +36,9 @@ image bar can scroll and add a python file to read all images into the image_bar
 v1.6:
 layout is center now, and projects finished!
 
+v1.7:
+add theme (especially in background)
+
 </section>
 
 

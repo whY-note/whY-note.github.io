@@ -11,3 +11,11 @@ import all .css files here
 @import "publication.css";
 @import "project.css";
 @import "mobile.css";
+
+/*------ theme styles ------*/
+
+/* 纯白色主题 */
+@import "theme/white.css"; 
+
+/* 星空主题 */
+/* @import "theme/star.css"; */ 
