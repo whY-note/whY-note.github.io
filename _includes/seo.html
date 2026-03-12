@@ -1,0 +1,43 @@
+{% assign seo_title = page.title | default: site.title %}
+{% assign seo_description = page.description | default: site.description %}
+{% assign seo_type = page.seo_type | default: "website" %}
+{% assign seo_image = page.image | default: site.default_image %}
+{% assign seo_keywords = page.keywords | default: site.keywords %}
+
+{% if page.url == "/" %}
+  {% assign canonical_url = site.url | append: site.baseurl | append: "/" %}
+{% else %}
+  {% assign canonical_url = site.url | append: site.baseurl | append: page.url | replace: "index.html", "" %}
+{% endif %}
+
+{% if seo_image and seo_image contains 'http' %}
+  {% assign seo_image_url = seo_image %}
+{% elsif seo_image %}
+  {% assign seo_image_url = site.url | append: site.baseurl | append: seo_image %}
+{% endif %}
+
+<title>{{ seo_title }} | {{ site.title }}</title>
+<meta name="description" content="{{ seo_description | strip_html | strip_newlines | escape }}">
+<meta name="keywords" content="{{ seo_keywords }}">
+<meta name="author" content="{{ site.author.name }}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{ canonical_url }}">
+
+<meta property="og:type" content="{{ seo_type }}">
+<meta property="og:title" content="{{ seo_title }} | {{ site.title }}">
+<meta property="og:description" content="{{ seo_description | strip_html | strip_newlines | escape }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+{% if seo_image_url %}
+<meta property="og:image" content="{{ seo_image_url }}">
+{% endif %}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ seo_title }} | {{ site.title }}">
+<meta name="twitter:description" content="{{ seo_description | strip_html | strip_newlines | escape }}">
+{% if site.twitter_username %}
+<meta name="twitter:site" content="@{{ site.twitter_username }}">
+{% endif %}
+{% if seo_image_url %}
+<meta name="twitter:image" content="{{ seo_image_url }}">
+{% endif %}

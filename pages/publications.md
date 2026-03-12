@@ -2,6 +2,10 @@
 layout: default
 title: Publications
 permalink: /publications/
+description: Publications and research outputs by Haowen Yan.
+keywords: Haowen Yan, haowen yan, 严浩文, Yhw, yhw, whY, whY-note, Sun Yat-Sen University, SYSU, publications, papers
+image: /assets/images/og-publications.png
+seo_type: article
 ---
 
 <div class="publications-page">

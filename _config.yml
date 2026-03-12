@@ -1,5 +1,13 @@
 # _config.yml
 
+title: Haowen Yan
+description: Personal homepage of Haowen Yan, featuring projects, publications, and research interests in robotics and embodied AI.
+url: https://why-note.github.io
+baseurl: ""
+default_image: /assets/images/og-default.png
+keywords: Haowen Yan, haowen yan, 严浩文, Yhw, yhw, whY, whY-note, Sun Yat-Sen University, SYSU
+twitter_username:
+
 author:
   name: Haowen Yan
   chinese_name: 严浩文
