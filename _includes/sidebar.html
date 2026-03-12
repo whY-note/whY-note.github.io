@@ -13,39 +13,37 @@
         <li> 
             <i 
             class="fa-solid fa-magnifying-glass"
-            style="color:#e63946;"
+            style="color:var(--sidebar-interest);"
             ></i>
             {{ profile.interests }} 
         </li>
         <li> 
             <i 
             class="fa-solid fa-location-dot"
-            style="color:#2a9d8f;"
+            style="color:var(--sidebar-location);"
             ></i>
             {{ profile.location }} 
         </li>
         <li> 
             <i 
             class="fa-solid fa-building-columns"
-            style="color:#6a4c93;"
+            style="color:var(--sidebar-university);"
             ></i>
             {{ profile.university }} 
         </li> 
         
         <li>
-            <a href="mailto:{{ profile.email }}">
             <i 
             class="fa-solid fa-envelope"
-            style="color:#f4a261;"
+            style="color:var(--sidebar-email);"
             ></i> {{ profile.email }}
-            </a>
         </li>
         
         <li>
             <a href="{{ profile.github }}">
                 <i 
                 class="fa-brands fa-github"
-                style="color:#333;"
+                style="color:var(--sidebar-github);"
                 ></i> Github
             </a>
         </li>
@@ -53,7 +51,7 @@
         <li>
             <a href="{{ profile.google_scholar }}">
                 <i class="fa-solid fa-graduation-cap"
-                style="color:#4285f4;"
+                style="color:var(--sidebar-google-scholar)"
                 ></i>
                 Google Scholar: pending
             </a>

@@ -1,8 +1,8 @@
 /* the top navigation  */
 
 .navbar{
-    background: linear-gradient(to right, #621EC3, #2D21E4);
-    color: white;
+    background: var(--navbar-bg);
+    color: var(--navbar-font-color);
     font-size: 20px;
 }
 

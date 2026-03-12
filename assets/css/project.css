@@ -93,7 +93,8 @@
 
 .project-card h3 {
     margin-top: 0;
-    color: #2a7ae2;
+    /* color: #2a7ae2; */
+    color: var(--color-card-title);
 }
 
 .project-card p {

@@ -28,11 +28,12 @@
 .honor-title {
     margin: 18px 0 0;
     max-width: 420px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.25;
     font-family: "Times New Roman", Georgia, serif;
     font-weight: 500;
-    color: #111;
+    /* color: #111; */
+    color: var(--color-text);
 }
 
 @media (max-width: 900px) {

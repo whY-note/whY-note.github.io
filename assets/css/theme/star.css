@@ -1,9 +1,36 @@
 /* 星空主题 */
 
+:root {
+    --color-text:         #e0e0e0;
+    --color-text-muted:   #bcbcbc;
+    --color-link:         #55e1ff;
+    --color-link-hover:   #00bee8;
+    
+    --color-heading:      #f0f0f0;
+    --color-card-title:   #88b8ff;
+    /* --color-button:   #aaccff; */
+
+    /* --color-footer:       #a6b6f0; */
+    --color-footer:       rgba(229, 237, 248, 0.6);
+    --footer-link-hover:  #3b82f6;
+
+    /* --navbar-bg:    linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.1)); */
+    --navbar-bg:    linear-gradient(to top, rgba(255,255,255,0.005), rgba(255,255,255,0.35));
+    --navbar-font-color:  #fff;
+
+    --sidebar-interest:   #1df7b8;
+    --sidebar-location:   #e63946;
+    --sidebar-university: #e4b7ff;
+    --sidebar-email:      #f4a261;
+    --sidebar-github:     white;
+    --sidebar-google-scholar: #4285f4;
+    --sidebar-link-hover:   #5faaf4;
+}
+
 html, body {
     /* 背景图片 */
     background-image:
-    url("/assets/images/backgroound_picture.jpg");
+    url("/assets/images/background/star.jpg");
 
     background-size: cover;
     background-position: center;

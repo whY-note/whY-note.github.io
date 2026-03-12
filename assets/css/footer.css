@@ -6,10 +6,10 @@
   margin-bottom: 0rem;
   margin-left: auto;
   margin-right: auto;
-  color: #030d76;
+  color: var(--color-footer);
   font-size: 0.9rem;
   text-align: left;
-  border-top: 1px solid #030d76;
+  border-top: 1px solid var(--color-footer);
   padding-top: 0.8rem;
 }
 
@@ -20,7 +20,7 @@
 
 .footer-title {
   margin: 0;
-  color: #030d76;
+  color: var(--color-footer);
   font-weight: 700;
 }
 
@@ -31,12 +31,12 @@
 }
 
 .footer-link {
-  color: #030d76;
+  color: var(--color-footer);
   text-decoration: none;
 }
 
 .footer-link:hover {
-  color: #3b82f6;
+  color: var(--footer-link-hover);
   text-decoration: none;
 }
 

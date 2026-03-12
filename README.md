@@ -41,6 +41,7 @@ https://whY-note.github.io
 - [x] 左边sidebar与右边content的滚动是独立的，分开的，一边动，另一边不会动
 - [x] 背景主题加入星空图
 - [ ] 为不同的主题适配相应的**文字颜色**
+- [ ] 星空背景下的按键尝试用**渐变色**
 - [x] 解决publications不出现的问题
 - [x] 添加project，并链接到Github
 - [x] github,scholar的图标
@@ -52,10 +53,12 @@ https://whY-note.github.io
 - [ ] avatar中的图片要向左移动一点，让人向中间一点，类似github头像的效果
 - [ ] 优化按键的形式
 - [ ] 添加个人logo
+- [ ] logo做一个星空版+一个白天版
 - [ ] 添加开头视频
 - [ ] navbar加搜索
 - [x] 屏幕大小变化时，要自适应地**居中**
 - [x] 检索优化
+- [ ] 删除sidebar的分界线
 
 ## 完成情况
 - [x] sidebar
