@@ -55,7 +55,7 @@ https://whY-note.github.io
 - [ ] 添加开头视频
 - [ ] navbar加搜索
 - [x] 屏幕大小变化时，要自适应地**居中**
-- [ ] 检索优化
+- [x] 检索优化
 
 ## 完成情况
 - [x] sidebar
