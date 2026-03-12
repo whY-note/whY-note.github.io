@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Home
+title: Home - Haowen Yan (严浩文)
 description: Homepage of Haowen Yan, including biography, research interests, selected projects, and contact information.
 keywords: Haowen Yan, haowen yan, 严浩文, Yan Haowen, yan haowen, yanhaowen, haowenyan, Yhw, yhw, whY, whY-note, Sun Yat-Sen University, SYSU
 image: /assets/images/og-home.png

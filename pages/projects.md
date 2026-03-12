@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Projects
+title: Projects - Haowen Yan (严浩文)
 permalink: /projects/
 description: Project portfolio of Haowen Yan, including robotics, AI, and software engineering work.
 keywords: Haowen Yan, haowen yan, 严浩文, Yan Haowen, yan haowen, yanhaowen, haowenyan, Yhw, yhw, whY, whY-note, Sun Yat-Sen University, SYSU, projects
