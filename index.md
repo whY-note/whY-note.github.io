@@ -55,6 +55,9 @@ SEO finish!
 v1.11:
 education finish!
 
+v1.12:
+Honors finish!
+
 </section>
 
 
@@ -134,7 +137,18 @@ education finish!
 
 # Honors & Academic Awards
 
-Coming soon ...
+<div class="honors-grid">
+{% for honor in site.data.honors %}
+    <div class="honor-card">
+        <img
+            src="{{ honor.image }}"
+            alt="{{ honor.title }}"
+            class="honor-image"
+        >
+        <h3 class="honor-title">{{ honor.title }}</h3>
+    </div>
+{% endfor %}
+</div>
 
 </section>
 

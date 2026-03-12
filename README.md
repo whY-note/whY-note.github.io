@@ -62,7 +62,7 @@ https://whY-note.github.io
 - [x] imagebar
 - [ ] navbar
 - [x] About me
-- [ ] education
+- [x] education
 - [x] footer
 - [ ] publications
 - [x] projects
