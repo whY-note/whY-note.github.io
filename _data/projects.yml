@@ -9,13 +9,18 @@
   stars: 0
 
 - title: PipelineCPU
-  description: A pipelined CPU implemented in a Computer Organization lab
+  description: Design and Implementation of a Pipelined CPU for a Computer Organization Experiment at SYSU
   url: https://github.com/whY-note/PipelineCPU
   stars: 0
 
 - title: Diffusion-DDIM
   description: DDIM implemented DPM-solver and v-predicition and trained models on smithsonian butterflies subset.
   url: https://github.com/whY-note/diffusion-DDIM-pytorch
+  stars: 0
+
+- title: Optimization-LASSO
+  description: A collection of optimization algorithm implementations for solving the LASSO problem.
+  url: https://github.com/whY-note/Optimization-LASSO
   stars: 0
 
 - title: AI-Lab
