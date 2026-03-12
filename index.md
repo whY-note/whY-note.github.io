@@ -52,6 +52,9 @@ footer finish!
 v1.10:
 SEO finish!
 
+v1.11:
+education finish!
+
 </section>
 
 
@@ -126,22 +129,41 @@ SEO finish!
 </section>
 
 
-<!---------- Education ------------>
+<!---------- Honors & Academic Awards ------------>
 <section data-aos="fade-up" markdown="1">
 
-# Education
+# Honors & Academic Awards
 
 Coming soon ...
 
 </section>
 
-
-<!---------- Awards ------------>
+<!---------- Education ------------>
 <section data-aos="fade-up" markdown="1">
 
-# Awards
+# Education
 
-Coming soon ...
+<div class="education-list">
+{% for education in site.data.education %}
+    <div class="education-card">
+        <div class="education-logo-wrapper">
+            <img
+                src="{{ education.logo }}"
+                alt="{{ education.school }} logo"
+                class="education-logo"
+            >
+        </div>
+
+        <div class="education-content">
+            <a href="{{education.website}}">
+                <i class="education-school">{{ education.school }}</i>
+            </a>
+            <p class="education-college"> {{education.degree}} from {{ education.college }}</p>
+            <p class="education-period">{{ education.period }}</p>
+        </div>
+    </div>
+{% endfor %}
+</div>
 
 </section>
 

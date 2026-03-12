@@ -1,0 +1,87 @@
+/* education */
+
+.education-list {
+	display: grid;
+	gap: 16px;
+}
+
+.education-card {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	border: 1px solid #e8e8e8;
+	border-radius: 10px;
+	padding: 14px 16px;
+	background: rgba(255, 255, 255, 0.02);
+	backdrop-filter: blur(4px);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.education-logo-wrapper {
+	flex: 0 0 68px;
+	width: 68px;
+	height: 68px;
+	border-radius: 12px;
+	overflow: hidden;
+	background: #f5f5f5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.education-logo {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.education-content {
+	display: grid;
+	gap: 6px;
+	min-width: 0;
+    margin-left: 20px;
+}
+
+.education-content p {
+	margin: 0;
+	line-height: 1.4;
+}
+
+.education-school {
+	font-size: 18px;
+	font-weight: 700;
+	color: #2a7ae2;
+}
+
+.education-college {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.education-period {
+	font-size: 14px;
+	color: #666;
+}
+
+@media (max-width: 768px) {
+	.education-card {
+		gap: 12px;
+		padding: 12px;
+	}
+
+	.education-logo-wrapper {
+		flex-basis: 58px;
+		width: 58px;
+		height: 58px;
+	}
+
+	.education-school {
+		font-size: 16px;
+	}
+}
