@@ -2,7 +2,7 @@
 layout: home
 title: Home
 description: Homepage of Haowen Yan, including biography, research interests, selected projects, and contact information.
-keywords: Haowen Yan, haowen yan, 严浩文, Yhw, yhw, whY, whY-note, Sun Yat-Sen University, SYSU
+keywords: Haowen Yan, haowen yan, 严浩文, Yan Haowen, yan haowen, yanhaowen, haowenyan, Yhw, yhw, whY, whY-note, Sun Yat-Sen University, SYSU
 image: /assets/images/og-home.png
 seo_type: profile
 ---
@@ -48,6 +48,9 @@ change the style of project-card background.
 
 v1.9:
 footer finish!
+
+v1.10:
+SEO finish!
 
 </section>
 
