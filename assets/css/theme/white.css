@@ -13,7 +13,8 @@
     --navbar-bg:          linear-gradient(to right, #621EC3, #2D21E4);
     --navbar-font-color:  white;
 
-    --sidebar-interest:   #2a9d8f; 
+    /* --sidebar-interest:   #2a9d8f;  */
+    --sidebar-interest:   #ffd634; 
     --sidebar-location:   #e63946;
     --sidebar-university: #6a4c93;
     --sidebar-email:      #f4a261;

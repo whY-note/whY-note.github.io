@@ -22,6 +22,10 @@
     text-decoration: none;
 }
 
+.nav-left .chinese-name {
+    font-size: 23px;
+}
+
 /* 当navbar的按键被按下时的响应：加下划线 */
 .navbar a:hover{ 
     text-decoration: underline;

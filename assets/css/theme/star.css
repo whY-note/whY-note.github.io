@@ -18,7 +18,8 @@
     --navbar-bg:    linear-gradient(to top, rgba(255,255,255,0.005), rgba(255,255,255,0.35));
     --navbar-font-color:  #fff;
 
-    --sidebar-interest:   #1df7b8;
+    /* --sidebar-interest:   #1df7b8; */
+    --sidebar-interest:   #f6fa2d;
     --sidebar-location:   #e63946;
     --sidebar-university: #e4b7ff;
     --sidebar-email:      #f4a261;

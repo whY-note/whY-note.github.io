@@ -3,7 +3,9 @@
 <aside class="sidebar">
     <img src="/assets/images/avatar.jpg" class="avatar">
     
-    <h2 class="name"> {{ profile.name }} | {{profile.chinese_name }} </h2>
+    <h2 class="name"> 
+        {{ profile.name }} | <span class="chinese-name">{{ profile.chinese_name }}</span>
+    </h2>
     
     <p class="bio">
         {{ profile.bio }}
@@ -54,6 +56,17 @@
                 style="color:var(--sidebar-google-scholar)"
                 ></i>
                 Google Scholar: pending
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ profile.rednote }}">
+                <img
+                src="https://www.xiaohongshu.com/favicon.ico"
+                alt="Xiaohongshu logo"
+                class="social-icon"
+                >
+                Rednote
             </a>
         </li>
     </ul>

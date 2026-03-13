@@ -1,8 +1,11 @@
 <!-- 顶部导航 -->
+
+{% assign profile = site.data.profile %}
+
 <header class="navbar">
   <div class="navbar-inner">
     <div class="nav-left">
-      Haowen Yan
+      {{ profile.name }} | <span class="chinese-name">{{ profile.chinese_name }}</span>
     </div>
     <nav class="nav-right">
       <a href="/publications/">Publications</a>

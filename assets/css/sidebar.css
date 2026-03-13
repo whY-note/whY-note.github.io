@@ -20,6 +20,7 @@
     border-radius: 50%;
 
     object-fit: cover;
+    object-position: 95% center; /* 显示出图片偏右边 95% 的部分 */
     display: block;
     margin: auto;
 }
@@ -55,6 +56,14 @@
 .info i{
     width: 20px;
     margin-right: 8px;
+}
+
+.info .social-icon{
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: text-bottom;
+    border-radius: 4px;
 }
 
 .info a{
