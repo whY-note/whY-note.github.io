@@ -16,14 +16,15 @@
     padding: 15px 40px;
 }
 
+
+.nav-left .font-kaiti {
+    font-size: 23px;
+}
+
 .navbar a{
     color: white;
     margin-left: 20px;
     text-decoration: none;
-}
-
-.nav-left .chinese-name {
-    font-size: 23px;
 }
 
 /* 当navbar的按键被按下时的响应：加下划线 */

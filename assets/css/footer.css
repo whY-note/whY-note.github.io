@@ -14,8 +14,22 @@
 }
 
 .footer-inner {
-  display: grid;
-  gap: 0.45rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footer-left {
+  font-size: 0.9rem;
+}
+.footer-right {
+  text-align: right;
+}
+
+.quote {
+  margin: 0;
+  color: var(--footer-quote);
 }
 
 .footer-title {

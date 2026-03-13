@@ -13,6 +13,7 @@
     /* --color-footer:       #a6b6f0; */
     --color-footer:       rgba(229, 237, 248, 0.6);
     --footer-link-hover:  #3b82f6;
+    --footer-quote:       rgba(229, 237, 248, 0.8);
 
     /* --navbar-bg:    linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.1)); */
     --navbar-bg:    linear-gradient(to top, rgba(255,255,255,0.005), rgba(255,255,255,0.35));

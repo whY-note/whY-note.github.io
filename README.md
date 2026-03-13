@@ -61,6 +61,7 @@ https://whY-note.github.io
 - [x] 删除sidebar的分界线
 - [x] 加入小红书账号
 - [x] 中文名改用楷体
+- [ ] 兴趣爱好部分写多点
 
 ## 完成情况
 - [x] sidebar
