@@ -18,7 +18,7 @@ import all .css files here
 /*------ theme styles ------*/
 
 /* 纯白色主题 */
-/* @import "theme/white.css";  */
+@import "theme/white.css";
 
-/* 星空主题 */
-@import "theme/star.css"; 
+/* 星空主题（默认） */
+@import "theme/star.css";

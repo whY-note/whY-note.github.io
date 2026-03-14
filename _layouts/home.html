@@ -5,6 +5,13 @@
   <meta charset="UTF-8">
   {% include seo.html %}
 
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('theme') || 'star';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -45,6 +52,7 @@
 
 <!-- AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="/assets/js/main.js"></script>
 
 <script>
   // move to /assets/js/

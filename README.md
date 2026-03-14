@@ -40,8 +40,10 @@ https://whY-note.github.io
 - [x] sidebar加图标
 - [x] 左边sidebar与右边content的滚动是独立的，分开的，一边动，另一边不会动
 - [x] 背景主题加入星空图
-- [ ] 为不同的主题适配相应的**文字颜色**
-- [ ] 星空背景下的按键尝试用**透明色**
+- [x] 为不同的主题适配相应的**文字颜色**
+- [x] 星空背景下的按键尝试用**透明色**
+- [x] 加入主题切换按钮
+- [ ] 改主题切换按钮的图标
 - [x] 解决publications不出现的问题
 - [x] 添加project，并链接到Github
 - [x] github,scholar的图标
@@ -51,7 +53,7 @@ https://whY-note.github.io
 - [x] 写一个Python脚本，从 `assets/images/image_bar/` 中读取所有图片，然后写入 `_data/image_bar.yml`中
 - [ ] 把image bar 里面的图片像素降低
 - [x] avatar中的图片要向左移动一点，让人向中间一点，类似github头像的效果
-- [ ] 优化按键的形式
+- [x] 优化按键的形式
 - [ ] 添加个人logo
 - [ ] logo做一个星空版+一个白天版
 - [ ] 添加开头视频
@@ -61,7 +63,8 @@ https://whY-note.github.io
 - [x] 删除sidebar的分界线
 - [x] 加入小红书账号
 - [x] 中文名改用楷体
-- [ ] 兴趣爱好部分写多点
+- [x] 兴趣爱好部分写多点
+- [ ] 兴趣爱好部分的list行距大些
 
 ## 完成情况
 - [x] sidebar
@@ -73,6 +76,6 @@ https://whY-note.github.io
 - [x] footer
 - [ ] publications
 - [x] projects
-- [ ] theme
+- [x] theme
 - [ ] CH/EN
 - [ ] Blog

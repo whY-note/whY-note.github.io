@@ -10,8 +10,8 @@
 .more-btn {
     display: inline-block;
     padding: 8px 16px;
-    background: #2a7ae2;
-    color: white;
+    background: var(--more-btn-bg);
+    color: var(--more-btn-font-color);
     border-radius: 6px;
     font-size: 16px;
     text-decoration: none;
@@ -20,7 +20,8 @@
 }
 
 .more-btn:hover {
-    background: #1a5fcc;
+    background: var(--more-btn-hover-bg);
+    color: var(--more-btn-hover-font-color);
     text-decoration: none;
 }
 
@@ -50,8 +51,8 @@
     top: 0;
     display: inline-block;
     padding: 8px 16px;
-    background-color: #2a7ae2;
-    color: #f0f0f0;
+    background-color: var(--back-btn-bg);
+    color: var(--back-btn-font-color);
     border-radius: 6px;
     font-size: 16px;
     text-decoration: none;
@@ -59,8 +60,8 @@
 }
 
 .back-btn:hover {
-    background: #1a5fcc;
-    color: #1a5fcc;
+    background: var(--back-btn-hover-bg);
+    color: var(--back-btn-hover-font-color);
     text-decoration: none;
 }
 
@@ -112,15 +113,16 @@
 .project-link {
     display: inline-block;
     padding: 6px 12px;
-    background: #f0f0f0;
-    color: #2a7ae2;
+    background: var(--project-link-bg);
+    color: var(--project-link-font-color);
     border-radius: 4px;
     font-weight: 500;
     transition: background 0.2s ease;
 }
 
 .project-link:hover {
-    background: #e8e8e8;
+    background: var(--project-link-hover-bg);
+    color: var(--project-link-hover-font-color);
     text-decoration: none;
 }
 

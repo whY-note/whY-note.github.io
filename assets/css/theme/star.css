@@ -1,6 +1,6 @@
 /* 星空主题 */
 
-:root {
+:root[data-theme="star"] {
     --color-text:         #e0e0e0;
     --color-text-muted:   #bcbcbc;
     --color-link:         #55e1ff;
@@ -15,7 +15,6 @@
     --footer-link-hover:  #3b82f6;
     --footer-quote:       rgba(229, 237, 248, 0.8);
 
-    /* --navbar-bg:    linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0.1)); */
     --navbar-bg:    linear-gradient(to top, rgba(255,255,255,0.005), rgba(255,255,255,0.35));
     --navbar-font-color:  #fff;
 
@@ -27,9 +26,25 @@
     --sidebar-github:     white;
     --sidebar-google-scholar: #4285f4;
     --sidebar-link-hover:   #5faaf4;
+
+    --back-btn-bg: rgba(255, 255, 255, 0.16);
+    --back-btn-hover-bg: rgba(255, 255, 255, 0.26);
+    --back-btn-font-color: #f0f0f0;
+    --back-btn-hover-font-color: #bcbcbccc;
+
+    --more-btn-bg: rgba(255, 255, 255, 0.16);
+    --more-btn-hover-bg: rgba(255, 255, 255, 0.26);
+    --more-btn-font-color: #f0f0f0;
+    --more-btn-hover-font-color: #bcbcbccc;
+
+    --project-link-bg: rgba(255, 255, 255, 0.16);
+    --project-link-hover-bg: rgba(255, 255, 255, 0.26);
+    --project-link-font-color: #ffffff;
+    --project-link-hover-font-color: #cccccccc;
 }
 
-html, body {
+html[data-theme="star"],
+html[data-theme="star"] body {
     /* 背景图片 */
     background-image:
     url("/assets/images/background/star.jpg");

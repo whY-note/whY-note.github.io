@@ -1,5 +1,5 @@
 /* 纯白色主题 */
-:root {
+:root[data-theme="white"] {
     --color-text:         #333;
     --color-text-muted:   #666;
     --color-link:         #2a7ae2;
@@ -22,9 +22,25 @@
     --sidebar-github:     #333;
     --sidebar-google-scholar: #4285f4;
     --sidebar-link-hover: #1a5fcc;
+
+    --back-btn-bg: #2a7ae2;
+    --back-btn-hover-bg: #1a5fcc;
+    --back-btn-font-color: #f0f0f0;
+    --back-btn-hover-font-color: #bcbcbccc;
+
+    --more-btn-bg: #2a7ae2;
+    --more-btn-hover-bg: #1a5fcc;
+    --more-btn-font-color: #f0f0f0;
+    --more-btn-hover-font-color: #bcbcbccc;
+
+    --project-link-bg: #f0f0f0;
+    --project-link-hover-bg: #bcbcbccc;
+    --project-link-font-color: #2a7ae2;
+    --project-link-hover-font-color: #1a5fcc;
 }
 
-html, body {
+html[data-theme="white"],
+html[data-theme="white"] body {
     background: #fafafa;
 
     background-size: cover;
