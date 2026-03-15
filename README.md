@@ -65,7 +65,7 @@ https://whY-note.github.io
 - [x] 中文名改用楷体
 - [x] 兴趣爱好部分写多点
 - [x] 兴趣爱好部分的list行距大些
-- [ ] navbar加上Home
+- [x] navbar加上Home
 
 ## 完成情况
 - [x] sidebar
