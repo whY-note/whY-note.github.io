@@ -21,15 +21,41 @@
 }
 
 .footer-left {
+  width: 300px;
   font-size: 0.9rem;
 }
 .footer-right {
-  text-align: right;
+  margin-left: 30px;   /* 把整个块推到右边 */
+  width: fit-content;  /* 宽度只等于内容宽度 */
+  text-align: left;    /* 内部文本左对齐 */
 }
 
 .quote {
   margin: 0;
   color: var(--footer-quote);
+}
+
+.quote-theme {
+  display: none;
+}
+
+.quote-text {
+  display: block;
+}
+
+.quote-author {
+  display: block;
+  text-align: right; /* 作者姓名右对齐 */
+  margin-top: 0.25rem;
+}
+
+html[data-theme='star'] .quote-star {
+  display: block;
+}
+
+html[data-theme='white'] .quote-white {
+  display: block;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .footer-title {

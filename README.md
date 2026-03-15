@@ -74,6 +74,7 @@ https://whY-note.github.io
 - [x] education
 - [x] honor
 - [x] footer
+- [ ] Contact Me
 - [ ] publications
 - [x] projects
 - [x] theme

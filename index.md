@@ -26,7 +26,7 @@ Feel free to reach out if you are interested in collaboration.
 
 Besides research, I am also passionate about:
 - ***Chinese calligraphy***: I enjoy the process of practicing Chinese calligraphy, which allows me to slow down, find inner calm, and relax.
-- ***Listening to music***: A fan of [Leslie Cheung](https://en.wikipedia.org/wiki/Leslie_Cheung), a famous singer and actor in Hong Kong.
+- ***Listening to music***: I am a fan of [Leslie Cheung](https://en.wikipedia.org/wiki/Leslie_Cheung), a famous singer and actor in Hong Kong.
 - ***Art and design***: I deeply enjoy the process of creating art, and I designed my personal logo myself.
 
 </section>

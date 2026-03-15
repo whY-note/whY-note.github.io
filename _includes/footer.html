@@ -1,10 +1,13 @@
 {% assign profile = site.data.profile %}
+{% assign quote_star_parts = profile.quote.theme_star | split: '—' %}
+{% assign quote_white_parts = profile.quote.theme_white | split: '—' %}
 
 <footer class="footer">
     <div class="footer-inner">
         <div class="footer-left">
+            <!-- Footer Left Content: Profile Information -->
             <p class="footer-title" data-i18n="footer.title">
-                {{ profile.name }} | <span class="font-kaiti">{{ profile.chinese_name }}</span>
+                © <span id="year"></span> {{ profile.name }} | <span class="font-kaiti">{{ profile.chinese_name }}</span>
             </p>
             <div class="footer-links">
                 Follow Me:
@@ -15,15 +18,32 @@
                 </a>
             </div>
             <p class="footer-note" data-i18n="footer.note">
-                Copyright 2026
+                {{profile.university}}
             </p>
         </div>
+
         <div class="footer-right">
+            <!-- Footer Right Content: Quote -->
             <p class="quote">
-                <span class="font-kaiti">{{ profile.quote.theme_star }}</span>
-                
+                <span class="quote-theme quote-star">
+                    <span class="font-kaiti quote-text">{{ quote_star_parts[0] | strip }}</span>
+                    {% if quote_star_parts.size > 1 %}
+                    <span class="font-kaiti quote-author">— {{ quote_star_parts[1] | strip }}</span>
+                    {% endif %}
+                </span>
+                <span class="quote-theme quote-white">
+                    <span class="quote-text">{{ quote_white_parts[0] | strip }}</span>
+                    {% if quote_white_parts.size > 1 %}
+                    <span class="quote-author">— {{ quote_white_parts[1] | strip }}</span>
+                    {% endif %}
+                </span>
             </p>
         </div>   
             
     </div>
 </footer>
+
+<script>
+    // Set the current year in the footer automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
