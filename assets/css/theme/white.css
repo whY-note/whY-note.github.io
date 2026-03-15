@@ -37,6 +37,8 @@
     --project-link-hover-bg: #bcbcbccc;
     --project-link-font-color: #2a7ae2;
     --project-link-hover-font-color: #1a5fcc;
+
+    --education-school-hover: #1a5fcc;
 }
 
 html[data-theme="white"],

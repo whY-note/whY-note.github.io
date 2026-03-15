@@ -41,6 +41,8 @@
     --project-link-hover-bg: rgba(255, 255, 255, 0.26);
     --project-link-font-color: #ffffff;
     --project-link-hover-font-color: #cccccccc;
+
+    --education-school-hover: #6fa8ff;
 }
 
 html[data-theme="star"],

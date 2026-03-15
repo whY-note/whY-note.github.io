@@ -59,6 +59,11 @@
 	color: var(--color-card-title);
 }
 
+.education-school:hover {
+	color: var(--education-school-hover);
+	text-decoration: underline;
+}
+
 .education-college {
 	font-size: 15px;
 	font-weight: 500;

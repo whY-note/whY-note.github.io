@@ -202,9 +202,8 @@ Coming soom ...
                 class="education-logo"
             >
         </div>
-
         <div class="education-content">
-            <a href="{{education.website}}">
+            <a href="{{education.website}}" class="education-href">
                 <i class="education-school">{{ education.school }}</i>
             </a>
             <p class="education-college"> {{education.degree}} from {{ education.college }}</p>
