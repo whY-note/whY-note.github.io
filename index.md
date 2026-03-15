@@ -71,11 +71,14 @@ add quote
 v1.14:
 add theme toggle and all font color, bg color, btn color have been changed
 
+v1.15:
+change the style of button
+
 </section>
 
 
 <!---------- Publications ------------>
-<!-- <section data-aos="fade-up" markdown="1">
+<section data-aos="fade-up" markdown="1">
 
 # Publications
 
@@ -83,25 +86,34 @@ add theme toggle and all font color, bg color, btn color have been changed
 
 <div class="publication">
 
-<img src="{{ publication.image }}" class="publication-img">
+    <img src="{{ publication.image }}" class="publication-img">
 
-<div class="publication-text">
+    <div class="publication-text">
 
-<h3>{{ publication.title }}</h3>
+        <h3>{{ publication.title }}</h3>
 
-<p>{{ publication.authors }}</p>
+        <p>{{ publication.authors }}</p>
 
-<p>{{ publication.venue }}</p>
+        <p>{{ publication.venue }}</p>
 
-<a href="{{ publication.pdf }}">PDF</a>
+        <a href="{{ publication.pdf }}">PDF</a>
 
-</div>
+    </div>
 
 </div>
 
 {% endfor %}
 
-</section> -->
+<a href="/publications/" class="more-btn">
+    More 
+    <span class="arrow">
+        
+        &raquo;
+    </span>
+</a>
+
+</section>
+
 
 <!---------- Projects ------------>
 <section data-aos="fade-up" markdown="1">
@@ -140,7 +152,13 @@ add theme toggle and all font color, bg color, btn color have been changed
 
 </div>
 
-<a href="/projects/" class="more-btn">More →</a>
+<a href="/projects/" class="more-btn">
+    More 
+    <span class="arrow">
+        
+        &raquo;
+    </span>
+</a>
 
 </section>
 

@@ -13,6 +13,7 @@ import all .css files here
 @import "project.css";
 @import "honors.css";
 @import "education.css";
+@import "button.css";
 @import "mobile.css";
 
 /*------ theme styles ------*/

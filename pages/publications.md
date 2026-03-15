@@ -10,8 +10,13 @@ seo_type: article
 
 <div class="publications-page">
 
-<div class="publications-header">
-    <a href="/" class="back-btn">← Back</a>
+<div class="projects-header">
+    <a href="/" class="back-btn">
+    <span class="arrow">
+        &laquo;
+    </span>
+    Back
+    </a>
 </div>
 
 <section data-aos="fade-up" markdown="1">

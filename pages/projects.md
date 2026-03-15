@@ -11,7 +11,12 @@ seo_type: website
 <div class="projects-page">
 
 <div class="projects-header">
-    <a href="/" class="back-btn">← Back</a>
+    <a href="/" class="back-btn">
+    <span class="arrow">
+        &laquo;
+    </span>
+    Back
+    </a>
 </div>
 
 <section data-aos="fade-up" markdown="1">

@@ -1,0 +1,67 @@
+
+/*------ back button ------*/
+.back-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    padding:  6px 14px;
+    background-color: var(--back-btn-bg);
+    color: var(--back-btn-font-color);
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+}
+
+.back-btn:hover {
+    background: var(--back-btn-hover-bg);
+    color: var(--back-btn-hover-font-color);
+    text-decoration: none;
+}
+
+.back-btn .arrow {
+    font-size: 1.4em;
+}
+
+/*------ more button ------*/
+.more-btn {
+    display: inline-block;
+    padding:  6px 14px;
+    background: var(--more-btn-bg);
+    color: var(--more-btn-font-color);
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+}
+
+.more-btn .arrow {
+    font-size: 1.4em;
+}
+
+.more-btn:hover {
+    background: var(--more-btn-hover-bg);
+    color: var(--more-btn-hover-font-color);
+    text-decoration: none;
+}
+
+
+/* responsive design */
+@media (max-width: 768px) {
+    .back-btn {
+        position: static;
+        align-self: flex-start;
+    }
+    
+    .more-btn {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+}

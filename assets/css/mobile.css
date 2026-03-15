@@ -17,14 +17,3 @@
     }
     
 }
-
-@media (max-width: 600px) {
-  .footer-inner {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .footer-right {
-    margin-left: 0;
-  }
-}
