@@ -77,6 +77,8 @@ change the style of button
 v1.16:
 Publication finish!
 
+v1.17:
+Contact Me finish!
 
 </section>
 
@@ -220,7 +222,15 @@ Coming soom ...
 
 # Contact Me
 
-Coming soon ...
+I welcome discussions and collaborations related to my research interests. If you would like to exchange ideas or explore potential collaborations, please feel free to contact me.
+
+{% assign profile = site.data.profile %}
+
+Email: {{ profile.email }}
+
+WeChat: [{{ profile.wechat.id }}]({{ profile.wechat.qr_code }})
+
+Github: [{{ profile.github }}]({{ profile.github }})
 
 </section>
 

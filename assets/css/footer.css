@@ -21,11 +21,11 @@
 }
 
 .footer-left {
-  width: 300px;
+  width: 400px;
   font-size: 0.9rem;
 }
 .footer-right {
-  margin-left: 30px;   /* 把整个块推到右边 */
+  margin-left: 30px;   
   width: fit-content;  /* 宽度只等于内容宽度 */
   text-align: left;    /* 内部文本左对齐 */
 }
