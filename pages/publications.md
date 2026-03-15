@@ -25,6 +25,28 @@ seo_type: article
 
 Coming soom ...
 
+<!-- {% for publication in site.data.publications %}
+
+<div class="publication">
+
+    <img src="{{ publication.image }}" class="publication-img">
+
+    <div class="publication-text">
+
+        <h3>{{ publication.title }}</h3>
+
+        <p>{{ publication.authors }}</p>
+
+        <p>{{ publication.venue }}</p>
+
+        <a href="{{ publication.pdf }}">PDF</a>
+
+    </div>
+
+</div>
+
+{% endfor %} -->
+
 </section>
 
 </div>

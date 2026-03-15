@@ -74,6 +74,10 @@ add theme toggle and all font color, bg color, btn color have been changed
 v1.15:
 change the style of button
 
+v1.16:
+Publication finish!
+
+
 </section>
 
 
@@ -82,7 +86,9 @@ change the style of button
 
 # Publications
 
-{% for publication in site.data.publications %}
+Coming soom ...
+
+<!-- {% for publication in site.data.publications limit:4 %}
 
 <div class="publication">
 
@@ -100,14 +106,13 @@ change the style of button
 
     </div>
 
-</div>
+</div> 
 
-{% endfor %}
+{% endfor %} -->
 
 <a href="/publications/" class="more-btn">
     More 
     <span class="arrow">
-        
         &raquo;
     </span>
 </a>
@@ -155,7 +160,6 @@ change the style of button
 <a href="/projects/" class="more-btn">
     More 
     <span class="arrow">
-        
         &raquo;
     </span>
 </a>
