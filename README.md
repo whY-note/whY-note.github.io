@@ -64,7 +64,7 @@ https://whY-note.github.io
 - [x] 加入小红书账号
 - [x] 中文名改用楷体
 - [x] 兴趣爱好部分写多点
-- [ ] 兴趣爱好部分的list行距大些
+- [x] 兴趣爱好部分的list行距大些
 
 ## 完成情况
 - [x] sidebar
