@@ -3,17 +3,22 @@ import all .css files here
 */
 
 @import "global.css";
+@import "content_wrapper.css";
+@import "content.css";
+
 @import "navbar.css";
 @import "sidebar.css";
-@import "content_wrapper.css";
-@import "image_bar.css";
 @import "footer.css";
-@import "content.css";
+@import "button.css";
+
 @import "publication.css";
 @import "project.css";
+@import "blog.css";
+
+@import "image_bar.css";
 @import "honors.css";
 @import "education.css";
-@import "button.css";
+
 @import "mobile.css";
 
 /*------ theme styles ------*/

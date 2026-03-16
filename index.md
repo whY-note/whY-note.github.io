@@ -80,6 +80,9 @@ Publication finish!
 v1.17:
 Contact Me finish!
 
+v1.18:
+Add initial blog
+
 </section>
 
 

@@ -24,24 +24,11 @@
 {% include header.html %}
 
 <div class="container">
-    <!-- left sidebar -->
-    <!-- {% include sidebar.html %} -->
 
-    <!-- content wrapper at the right -->
     <div class="content-wrapper">
         <!-- content -->
         <main class="content" id="contentMain">
-            <!-- image bar -->
-            <!-- <div class="image-bar">
-                <div class="image-carousel" id="imageCarousel">
-                    {% for image in site.data.image_bar.images %}
-                        <img src="{{ image }}" alt="carousel-image">
-                    {% endfor %}
-                    {% for image in site.data.image_bar.images %}
-                        <img src="{{ image }}" alt="carousel-image">
-                    {% endfor %}
-                </div>
-            </div> -->
+
             <!-- main content (from md)-->
             {{content}}
 
@@ -54,118 +41,7 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="/assets/js/main.js"></script>
 
-<script>
-  // move to /assets/js/
-  // 初始化 AOS，禁用默认的窗口滚动监听
-  AOS.init({
-    duration: 800,
-    once: true,
-    disable: 'mobile',
-    startEvent: 'load'
-  });
-
-  // 轮播图片动画
-  document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.getElementById('imageCarousel');
-    if (carousel) {
-      const images = Array.from(carousel.querySelectorAll('img'));
-      const imageCount = Math.floor(images.length / 2); // 两组相同图片做无缝循环
-      const speed = 40; // 每秒移动像素数
-      const direction = -1; // 图片移动方向： 1: 向右移动，-1: 向左移动
-      let cycleWidth = 0;
-      let offset = 0;
-      let rafId = null;
-      let lastTime = null;
-
-      function calcCycleWidth() {
-        cycleWidth = images.slice(0, imageCount).reduce(function(total, img) {
-          const style = window.getComputedStyle(img);
-          const marginRight = parseFloat(style.marginRight) || 0;
-          return total + img.getBoundingClientRect().width + marginRight;
-        }, 0);
-
-        // 右移循环：从 -cycleWidth 开始移动到 0，然后回到 -cycleWidth
-        offset = -cycleWidth;
-        carousel.style.transform = `translateX(${offset}px)`;
-      }
-
-      function animate(time) {
-        if (lastTime == null) {
-          lastTime = time;
-        }
-
-        const delta = (time - lastTime) / 1000;
-        lastTime = time;
-
-        offset += speed * delta * direction;
-
-        // 循环条件
-        if (direction === 1 && offset >= 0) {
-          offset -= cycleWidth;
-        } 
-        else if (direction === -1 && offset <= -cycleWidth) {
-          offset += cycleWidth;
-        }
-
-        carousel.style.transform = `translateX(${offset}px)`;
-        rafId = requestAnimationFrame(animate);
-      }
-
-      function startCarousel() {
-        if (imageCount === 0) {
-          return;
-        }
-
-        calcCycleWidth();
-        if (cycleWidth <= 0) {
-          return;
-        }
-
-        if (rafId !== null) {
-          cancelAnimationFrame(rafId);
-        }
-        lastTime = null;
-        rafId = requestAnimationFrame(animate);
-      }
-
-      // 确保图片尺寸可用后再计算总宽度
-      Promise.all(images.map(function(img) {
-        if (img.complete) {
-          return Promise.resolve();
-        }
-        return new Promise(function(resolve) {
-          img.addEventListener('load', resolve, { once: true });
-          img.addEventListener('error', resolve, { once: true });
-        });
-      })).then(startCarousel);
-
-      window.addEventListener('resize', function() {
-        startCarousel();
-      });
-    }
-
-    // 手动监听 .content 容器的滚动事件
-    const contentEl = document.querySelector('.content');
-    if (contentEl) {
-      // 监听滚动并手动触发 AOS 检测
-      contentEl.addEventListener('scroll', function() {
-        document.querySelectorAll('[data-aos]').forEach(function(el) {
-          const rect = el.getBoundingClientRect();
-          const contentRect = contentEl.getBoundingClientRect();
-          
-          // 检查元素是否在 content 容器的可视区域内
-          if (rect.top < contentRect.bottom && rect.bottom > contentRect.top) {
-            el.classList.add('aos-animate');
-          }
-        });
-      });
-      
-      // 初始触发一次，显示首屏内容
-      contentEl.dispatchEvent(new Event('scroll'));
-    }
-  });
-</script>
-
+<script src="/assets/js/AOS_scroll_reveal.js"></script>
 
 </body>
 </html>

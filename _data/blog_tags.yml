@@ -1,0 +1,23 @@
+- tag: Notes
+  slug: note
+  entries:
+    - title: Note-Library
+      url: https://why-note.github.io/Note-Library/
+      description: 我的笔记仓库与阅读整理。
+
+- tag: 技术类
+  slug: tech
+  entries:
+    - title: 个人网站开发日志
+      url: /
+      description: 记录本站迭代版本与功能更新。
+    - title: 项目列表
+      url: /projects/
+      description: 项目实践与代码链接汇总。
+
+- tag: 论文类
+  slug: paper
+  entries:
+    - title: Publications
+      url: /publications/
+      description: 论文与学术成果列表。
