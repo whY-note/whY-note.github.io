@@ -1,2 +1,21 @@
 _site/
 .jekyll-cache/
+
+# Latex auxiliary / intermediate files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi

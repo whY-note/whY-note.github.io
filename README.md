@@ -81,3 +81,4 @@ https://whY-note.github.io
 - [x] theme
 - [ ] CH/EN
 - [ ] Blog
+- [ ] resume
