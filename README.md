@@ -43,7 +43,7 @@ https://whY-note.github.io
 - [x] 为不同的主题适配相应的**文字颜色**
 - [x] 星空背景下的按键尝试用**透明色**
 - [x] 加入主题切换按钮
-- [ ] 改主题切换按钮的图标
+- [x] 改主题切换按钮的图标
 - [x] 解决publications不出现的问题
 - [x] 添加project，并链接到Github
 - [x] github,scholar的图标
