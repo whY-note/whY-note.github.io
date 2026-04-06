@@ -5,12 +5,7 @@
   <meta charset="UTF-8">
   {% include seo.html %}
 
-  <script>
-    (function() {
-      var savedTheme = localStorage.getItem('theme') || 'star';
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    })();
-  </script>
+  <script src="/assets/js/theme_toggle.js"></script>
 
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" 
@@ -33,42 +28,6 @@
         <source src="/assets/video/begin_video.mp4" type="video/mp4">
     </video>
 </div>
-
-<style>
-    .intro-overlay {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        background: #000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .intro-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    body.intro-playing {
-        overflow: hidden;
-    }
-
-    body.intro-playing #homeRoot {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    #homeRoot {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        min-height: 100vh;
-        opacity: 1;
-        transition: opacity 0.35s ease;
-    }
-</style>
 
 <div id="homeRoot">
 
@@ -101,80 +60,16 @@
     </div>
 </div>
 
-<!-- AOS JS -->
+<!-- JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 <script src="/assets/js/main.js"></script>
+
 <script src="/assets/js/image_bar.js"></script>
 
 <script src="/assets/js/AOS_scroll_reveal.js"></script>
 
-<script>
-    (function() {
-        var introOverlay = document.getElementById('introOverlay');
-        var introVideo = document.getElementById('introVideo');
-        var body = document.body;
-        var sessionKey = 'homeIntroPlayed';
-
-        if (!introOverlay || !introVideo || !body) {
-            return;
-        }
-
-        function isInternalReferrer() {
-            if (!document.referrer) {
-                return false;
-            }
-
-            try {
-                return new URL(document.referrer).origin === window.location.origin;
-            } catch (e) {
-                return false;
-            }
-        }
-
-        function hasPlayedInSession() {
-            try {
-                return window.sessionStorage.getItem(sessionKey) === '1';
-            } catch (e) {
-                return false;
-            }
-        }
-
-        function markPlayed() {
-            try {
-                window.sessionStorage.setItem(sessionKey, '1');
-            } catch (e) {
-                // Ignore storage failures and keep graceful fallback behavior.
-            }
-        }
-
-        function enterHome() {
-            if (!introOverlay) {
-                return;
-            }
-
-            body.classList.remove('intro-playing');
-            introOverlay.remove();
-        }
-
-        if (isInternalReferrer() || hasPlayedInSession()) {
-            enterHome();
-            return;
-        }
-
-        markPlayed();
-        body.classList.add('intro-playing');
-
-        var playPromise = introVideo.play();
-        if (playPromise && typeof playPromise.catch === 'function') {
-            playPromise.catch(function() {
-                enterHome();
-            });
-        }
-
-        introVideo.addEventListener('ended', enterHome, { once: true });
-        introVideo.addEventListener('error', enterHome, { once: true });
-    })();
-</script>
+<script src="/assets/js/intro_video.js"></script>
 
 </div>
 

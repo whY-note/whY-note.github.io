@@ -19,6 +19,8 @@ import all .css files here
 @import "honors.css";
 @import "education.css";
 
+@import "intro_video.css";
+
 @import "mobile.css";
 
 /*------ theme styles ------*/

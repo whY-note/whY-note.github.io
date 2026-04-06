@@ -86,6 +86,9 @@ Add initial blog
 v1.19:
 Resume finish!
 
+v1.20:
+add intro video
+
 </section>
 
 

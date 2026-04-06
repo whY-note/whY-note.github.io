@@ -1,0 +1,35 @@
+/* intro video */
+
+.intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body.intro-playing {
+    overflow: hidden;
+}
+
+body.intro-playing #homeRoot {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#homeRoot {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+    opacity: 1;
+    transition: opacity 0.35s ease;
+}
