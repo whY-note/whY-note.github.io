@@ -66,6 +66,7 @@ https://whY-note.github.io
 - [x] 兴趣爱好部分写多点
 - [x] 兴趣爱好部分的list行距大些
 - [x] navbar加上Home
+- [ ] image_bar 中的相片风格目前太单一，要加些**比赛**、**写字**等相片，
 
 ## 完成情况
 - [x] sidebar
