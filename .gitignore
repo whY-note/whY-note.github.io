@@ -19,4 +19,4 @@ _site/
 *.vrb
 *.xdv
 *.dvi
-*.DS_Store
+.DS_Store
