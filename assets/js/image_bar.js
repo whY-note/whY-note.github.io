@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (carousel) {
     const images = Array.from(carousel.querySelectorAll('img'));
     const imageCount = Math.floor(images.length / 2); // 两组相同图片做无缝循环
+    const primaryImages = images.slice(0, imageCount);
     const speed = 40; // 每秒移动像素数
     const direction = -1; // 图片移动方向： 1: 向右移动，-1: 向左移动
     let cycleWidth = 0;
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let lastTime = null;
 
     function calcCycleWidth() {
-        cycleWidth = images.slice(0, imageCount).reduce(function(total, img) {
+        cycleWidth = primaryImages.reduce(function(total, img) {
         const style = window.getComputedStyle(img);
         const marginRight = parseFloat(style.marginRight) || 0;
         return total + img.getBoundingClientRect().width + marginRight;
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 确保图片尺寸可用后再计算总宽度
-    Promise.all(images.map(function(img) {
+    Promise.all(primaryImages.map(function(img) {
         if (img.complete) {
         return Promise.resolve();
         }

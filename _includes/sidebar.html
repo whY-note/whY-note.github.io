@@ -1,7 +1,7 @@
 {% assign profile = site.data.profile %}
 
 <aside class="sidebar">
-    <img src="/assets/images/avatar.jpg" class="avatar">
+    <img src="/assets/images/avatar.jpg" class="avatar" loading="eager" decoding="async" fetchpriority="high">
     
     <h2 class="name"> 
         {{ profile.name }} | <span class="font-kaiti">{{ profile.chinese_name }}</span>
@@ -56,6 +56,9 @@
                 src="/assets/images/icons/google_scholar_icon.png"
                 alt="Google Scholar logo"
                 class="social-icon"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
                 >
                 Coming soon ...
             </a>
@@ -67,6 +70,9 @@
                 src="https://cdn.simpleicons.org/wechat"
                 alt="WeChat logo"
                 class="social-icon"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
                 >
                 WeChat
             </a>
@@ -78,6 +84,9 @@
                 src="https://www.xiaohongshu.com/favicon.ico"
                 alt="Xiaohongshu logo"
                 class="social-icon"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
                 >
                 Rednote
             </a>

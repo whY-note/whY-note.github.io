@@ -57,7 +57,6 @@ https://whY-note.github.io
 - [ ] 添加个人logo
 - [ ] logo做一个星空版+一个白天版
 - [x] 添加开头视频
-- [ ] navbar加搜索
 - [x] 屏幕大小变化时，要自适应地**居中**
 - [x] 检索优化
 - [x] 删除sidebar的分界线
@@ -71,7 +70,7 @@ https://whY-note.github.io
 ## 完成情况
 - [x] sidebar
 - [x] imagebar
-- [ ] navbar
+- [x] navbar
 - [x] About me
 - [x] education
 - [x] honor

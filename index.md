@@ -2,11 +2,11 @@
 layout: home
 title: Home
 description: Homepage of Haowen Yan, including biography, research interests, selected projects, and contact information.
-keywords: Haowen Yan, haowen yan, 严浩文, Yan Haowen, yan haowen, yanhaowen, haowenyan, Yhw, yhw, whY, whY-note, Sun Yat-Sen University, SYSU
+keywords: Haowen Yan, haowen yan, 严浩文, Yan Haowen, yan haowen, yanhaowen, haowenyan, Yhw, yhw, whY, whY-note
 image: /assets/images/og-home.png
 seo_type: profile
 ---
-
+<!------------------ About me ------------------>
 <section data-aos="fade-up" markdown="1">
 
 # About Me
@@ -31,6 +31,7 @@ Besides research, I am also passionate about:
 
 </section>
 
+<!------------------ News ------------------>
 <section data-aos="fade-up" markdown="1">
 
 # News
@@ -88,6 +89,9 @@ Resume finish!
 
 v1.20:
 add intro video
+
+v1.21:
+loading faster
 
 </section>
 
@@ -190,6 +194,9 @@ Coming soom ...
             src="{{ honor.image }}"
             alt="{{ honor.title }}"
             class="honor-image"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
         >
         <h3 class="honor-title">{{ honor.title }}</h3>
     </div>
@@ -211,6 +218,9 @@ Coming soom ...
                 src="{{ education.logo }}"
                 alt="{{ education.school }} logo"
                 class="education-logo"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
             >
         </div>
         <div class="education-content">

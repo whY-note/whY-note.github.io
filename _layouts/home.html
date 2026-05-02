@@ -23,9 +23,9 @@
         autoplay
         muted
         playsinline
-        preload="auto"
+        preload="none"
     >
-        <source src="/assets/video/begin_video.mp4" type="video/mp4">
+        <source data-src="/assets/video/begin_video.mp4" type="video/mp4">
     </video>
 </div>
 
@@ -45,10 +45,27 @@
             <div class="image-bar">
                 <div class="image-carousel" id="imageCarousel">
                     {% for image in site.data.image_bar.images %}
-                        <img src="{{ image }}" alt="carousel-image">
+                        <img
+                            src="{{ image }}"
+                            alt="carousel-image"
+                            decoding="async"
+                            {% if forloop.index <= 3 %}
+                            loading="eager"
+                            fetchpriority="high"
+                            {% else %}
+                            loading="lazy"
+                            fetchpriority="low"
+                            {% endif %}
+                        >
                     {% endfor %}
                     {% for image in site.data.image_bar.images %}
-                        <img src="{{ image }}" alt="carousel-image">
+                        <img
+                            src="{{ image }}"
+                            alt="carousel-image"
+                            loading="lazy"
+                            decoding="async"
+                            fetchpriority="low"
+                        >
                     {% endfor %}
                 </div>
             </div>

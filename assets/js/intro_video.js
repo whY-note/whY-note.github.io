@@ -1,6 +1,7 @@
 (function() {
     var introOverlay = document.getElementById('introOverlay');
     var introVideo = document.getElementById('introVideo');
+    var introSource = introVideo ? introVideo.querySelector('source[data-src]') : null;
     var body = document.body;
     var sessionKey = 'homeIntroPlayed';
 
@@ -45,6 +46,17 @@
         introOverlay.remove();
     }
 
+    function prepareVideoSource() {
+        if (!introVideo || !introSource) {
+            return;
+        }
+
+        if (!introSource.getAttribute('src')) {
+            introSource.setAttribute('src', introSource.getAttribute('data-src'));
+            introVideo.load();
+        }
+    }
+
     if (isInternalReferrer() || hasPlayedInSession()) {
         enterHome();
         return;
@@ -52,6 +64,7 @@
 
     markPlayed();
     body.classList.add('intro-playing');
+    prepareVideoSource();
 
     var playPromise = introVideo.play();
     if (playPromise && typeof playPromise.catch === 'function') {
