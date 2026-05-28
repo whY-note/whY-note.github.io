@@ -51,11 +51,8 @@ https://whY-note.github.io
 - [x] 添加滚动渐渐出现的效果
 - [x] 解决imagebar不能移动的问题 -->现在image bar里面的图像可以左移或者右移，只需要改参数`direction`
 - [x] 写一个Python脚本，从 `assets/images/image_bar/` 中读取所有图片，然后写入 `_data/image_bar.yml`中
-- [ ] 把image bar 里面的图片像素降低
 - [x] avatar中的图片要向左移动一点，让人向中间一点，类似github头像的效果
 - [x] 优化按键的形式
-- [ ] 添加个人logo
-- [ ] logo做一个星空版+一个白天版
 - [x] 添加开头视频
 - [x] 屏幕大小变化时，要自适应地**居中**
 - [x] 检索优化
@@ -65,7 +62,11 @@ https://whY-note.github.io
 - [x] 兴趣爱好部分写多点
 - [x] 兴趣爱好部分的list行距大些
 - [x] navbar加上Home
+- [ ] Blog 含有：Life（生活感想、风景照片，个人感悟），Notes（学习笔记），Tech（技术文档）
 - [ ] image_bar 中的相片风格目前太单一，要加些**比赛**、**写字**等相片，
+- [ ] 添加个人logo
+- [ ] logo做一个星空版+一个白天版
+- [ ] 白天版改成羊皮纸风格
 
 ## 完成情况
 - [x] sidebar
@@ -79,6 +80,6 @@ https://whY-note.github.io
 - [x] publications
 - [x] projects
 - [x] theme
+- [x] resume
 - [ ] CH/EN
 - [ ] Blog
-- [x] resume

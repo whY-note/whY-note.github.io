@@ -15,8 +15,8 @@
       url: /projects/
       description: 项目实践与代码链接汇总。
 
-- tag: 论文类
-  slug: paper
+- tag: Life
+  slug: life
   entries:
     - title: Publications
       url: /publications/

@@ -1,0 +1,78 @@
+
+:root[data-theme="parchment"] {
+    /* Parchment / 羊皮纸 风格变量 */
+    --color-text:         #3b2f2a; /* 深褐，适合墨色 */
+    --color-text-muted:   #6f5b4f;
+    --color-link:         #7c3f08; /* 温暖的棕色链接 */
+    --color-link-hover:   #55300a;
+    --color-heading:      #2e241f;
+    --color-card-title:   #5a3a1f;
+
+    --color-footer:       #2e241f;
+    --footer-link-hover:  #7c3f08;
+    --footer-quote:       #2e241f;
+
+    --navbar-bg:          linear-gradient(180deg, rgba(255,250,240,0.9), rgba(245,230,200,0.95));
+    --navbar-font-color:  #2e241f;
+
+    --sidebar-interest:   #8b5e3c;
+    --sidebar-location:   #8b5e3c;
+    --sidebar-university: #6a4c3a;
+    --sidebar-email:      #8b5e3c;
+    --sidebar-github:     #3b2f2a;
+    --sidebar-google-scholar: #6a4c3a;
+    --sidebar-link-hover: #55300a;
+
+    --back-btn-bg: #e7d3b3;
+    --back-btn-hover-bg: #d9c39a;
+    --back-btn-font-color: #3b2f2a;
+    --back-btn-hover-font-color: #2e241f;
+
+    --more-btn-bg: #e7d3b3;
+    --more-btn-hover-bg: #d9c39a;
+    --more-btn-font-color: #3b2f2a;
+    --more-btn-hover-font-color: #2e241f;
+
+    --project-link-bg: rgba(255,255,255,0.6);
+    --project-link-hover-bg: rgba(0,0,0,0.03);
+    --project-link-font-color: #5a3a1f;
+    --project-link-hover-font-color: #55300a;
+
+    --education-school-hover: #55300a;
+}
+
+html[data-theme="parchment"],
+html[data-theme="parchment"] body {
+    /* 基础羊皮纸色 + 细微纹理叠加 */
+    background-color: #f6ead4;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 6px 6px;
+    background-position: center;
+    background-repeat: repeat, repeat;
+    background-attachment: fixed;
+
+    /* 使用衬线字体以靠近羊皮纸的古典风格 */
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: var(--color-text);
+}
+
+/* 卡片 & 内容容器样式微调，使其像贴在羊皮纸上 */
+.content, .project-card, .honor-card, .education-card {
+    background: rgba(255, 250, 240, 0.8);
+    box-shadow: 0 6px 18px rgba(50,40,30,0.12);
+    border: 1px solid rgba(80,60,40,0.06);
+    border-radius: 6px;
+}
+
+/* 按钮样式适配 */
+.more-btn, .back-btn, .project-link {
+    background: var(--more-btn-bg);
+    color: var(--more-btn-font-color);
+    border: 1px solid rgba(80,60,40,0.08);
+}
+.more-btn:hover, .back-btn:hover, .project-link:hover {
+    background: var(--more-btn-hover-bg);
+    color: var(--more-btn-hover-font-color);
+}
