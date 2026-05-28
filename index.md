@@ -12,7 +12,7 @@ seo_type: profile
 # About Me
 
 Hi! I am Haowen Yan, an undergraduate student majoring in Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/). 
-Currently, I am a research intern at [Xspark AI](https://github.com/XsparkAI). I was also privileged to intern at [TEA Lab](https://github.com/TEA-Lab) under the supervision of Prof. [Huazhe Xu](http://hxu.rocks/), where I worked on **teleoperation**. Before that, I was also fortunate to be mentored by Prof. [Gang Chen](https://cse.sysu.edu.cn/teacher/Chengang), working on **optimal control and UAV**.
+Currently, I am a research intern at [Xspark AI](https://github.com/XsparkAI). I was also privileged to intern at [TEA Lab](https://github.com/TEA-Lab) under the supervision of Prof. [Huazhe Xu](http://hxu.rocks/), where I worked on **teleoperation**. Before that, I was fortunate to be mentored by Prof. [Gang Chen](https://cse.sysu.edu.cn/teacher/Chengang), working on **optimal control and UAV**.
 
 ## Research Interests
 
