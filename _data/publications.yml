@@ -1,14 +1,8 @@
 # example
-- title: Decomposed Object Manipulation via Dual-Actor Policy
-  authors: Bin Fan, Jianjian Jiang, Haowen Yan
+- title:RoboDojo: A Unified Sim-and-Real Benchmark for Efficient Evaluationof Generalist Robot Manipulation Policies (Workshop Version)
+  authors: Tianxing Chen*, Zixuan Li*, Weijie Wan*, <strong>Haowen Yan*</strong>, Honghao Su*, Junyuan Tang*,Kailun Su, Baijun Chen, Yan Qin, Zijian Lin, Kai-Chong Lei, Kaixuan Wang, Qiwei Liang, Qi Xiong, Yao Mu, Wenbo Ding, Ping Luo, Yue Chen 
   venue: arXiv 2025
-  pdf: /papers/paper1.pdf
+  pdf: ...
+  page: ...
   image: /assets/images/paper1.png
-  code: ...
-
-- title: Efficient Policy Learning for Robotics
-  authors: Haowen Yan, Others
-  venue: ICRA 2026
-  pdf: /papers/paper2.pdf
-  image: /assets/images/paper2.png
   code: ...

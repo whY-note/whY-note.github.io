@@ -36,6 +36,9 @@ Besides research, I am also passionate about:
 
 # News
 
+The website design has been completed.
+
+<!-- 
 v1.3: 
 left sidebar and right content can scroll independently, and all content can appear while scroll.
 
@@ -91,7 +94,7 @@ v1.20:
 add intro video
 
 v1.21:
-loading faster
+loading faster -->
 
 </section>
 
