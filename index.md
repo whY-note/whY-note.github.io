@@ -36,7 +36,7 @@ Besides research, I am also passionate about:
 
 # News
 
-The website design has been completed.
+[2026.05.03] The website design has been completed.
 
 <!-- 
 v1.3: 
