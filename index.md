@@ -16,7 +16,7 @@ Currently, I am a research intern at [Xspark AI](https://github.com/XsparkAI). I
 
 ## Research Interests
 
-My research interests mainly include **Embodied AI**, **robotics**, **reinforcement learning** and **optimal control**. 
+My research interests mainly include **Embodied AI**, **robotics**, **reinforcement learning** and **world model**. 
 
 My long-term research goal is to develop robotic systems capable of operating in complex and hazardous environments, such as fire or earthquake scenarios, to assist in rescue missions and ultimately benefit society and our humanity.
 
