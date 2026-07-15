@@ -81,5 +81,5 @@ https://whY-note.github.io
 - [x] projects
 - [x] theme
 - [x] resume
-- [ ] CH/EN
+- [x] research experience
 - [ ] Blog

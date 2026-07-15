@@ -12,7 +12,7 @@ seo_type: profile
 # About Me
 
 Hi! I am Haowen Yan, an undergraduate student majoring in Computer Science and Technology at [Sun Yat-Sen University](https://www.sysu.edu.cn/). 
-Currently, I am a research intern at [Xspark AI](https://github.com/XsparkAI). I was also privileged to intern at [TEA Lab](https://github.com/TEA-Lab) under the supervision of Prof. [Huazhe Xu](http://hxu.rocks/), where I worked on **teleoperation**. Before that, I was fortunate to be mentored by Prof. [Gang Chen](https://cse.sysu.edu.cn/teacher/Chengang), working on **optimal control and UAV**.
+Previously, I was a research intern at [Xspark AI](https://github.com/XsparkAI). I was also privileged to intern at [TEA Lab](https://github.com/TEA-Lab) under the supervision of Prof. [Huazhe Xu](http://hxu.rocks/), where I worked on **teleoperation**. Before that, I was fortunate to be mentored by Prof. [Gang Chen](https://cse.sysu.edu.cn/teacher/Chengang), working on **optimal control and UAV**.
 
 ## Research Interests
 
@@ -104,9 +104,8 @@ loading faster -->
 
 # Publications
 
-Coming soom ...
-
-<!-- {% for publication in site.data.publications limit:4 %}
+<!-- Only show the top 4 -->
+{% for publication in site.data.publications limit:4 %}
 
 <div class="publication">
 
@@ -120,13 +119,17 @@ Coming soom ...
 
         <p>{{ publication.venue }}</p>
 
-        <a href="{{ publication.pdf }}">PDF</a>
+        <div class="publication-links">
+            <a href="{{ publication.page }}">Page</a>
+            <a href="{{ publication.pdf }}">Paper</a>
+            <a href="{{ publication.code }}">Code</a>
+        </div>
 
     </div>
 
 </div> 
 
-{% endfor %} -->
+{% endfor %}
 
 <a href="/publications/" class="more-btn">
     More 
@@ -208,6 +211,7 @@ Coming soom ...
 
 </section>
 
+
 <!---------- Education ------------>
 <section data-aos="fade-up" markdown="1">
 
@@ -232,6 +236,38 @@ Coming soom ...
             </a>
             <p class="education-college"> {{education.degree}} from {{ education.college }}</p>
             <p class="education-period">{{ education.period }}</p>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+</section>
+
+
+<!---------- Research Experience ------------>
+<section data-aos="fade-up" markdown="1">
+
+# Research Experience
+
+<div class="research_experience-list">
+{% for research_experience in site.data.research_experience %}
+    <div class="research_experience-card">
+        <div class="research_experience-logo-wrapper">
+            <img
+                src="{{ research_experience.logo }}"
+                alt="{{ research_experience.place }} logo"
+                class="research_experience-logo"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+            >
+        </div>
+        <div class="research_experience-content">
+            <p class="research_experience-place">{{ research_experience.place }}</p>
+            <p class="research_experience-job"> 
+                {{research_experience.job_title}} - {{ research_experience.job_description }}
+            </p>
+            <p class="research_experience-period">{{ research_experience.period }}</p>
         </div>
     </div>
 {% endfor %}

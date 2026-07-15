@@ -23,9 +23,9 @@ seo_type: article
 
 # Publications
 
-Coming soom ...
+<!-- Coming soom ... -->
 
-<!-- {% for publication in site.data.publications %}
+{% for publication in site.data.publications %}
 
 <div class="publication">
 
@@ -39,13 +39,17 @@ Coming soom ...
 
         <p>{{ publication.venue }}</p>
 
-        <a href="{{ publication.pdf }}">PDF</a>
+        <div class="publication-links">
+            <a href="{{ publication.page }}">Page</a>
+            <a href="{{ publication.pdf }}">Paper</a>
+            <a href="{{ publication.code }}">Code</a>
+        </div>
 
     </div>
 
 </div>
 
-{% endfor %} -->
+{% endfor %}
 
 </section>
 

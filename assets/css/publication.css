@@ -44,7 +44,7 @@
 }
 
 .publication-img{
-    width: 120px;
+    width: 160px;
     height: 120px;
     flex-shrink: 0;
     object-fit: cover;
@@ -69,10 +69,15 @@
     line-height: 1.6;
 }
 
+.publication-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
 .publication-text a {
     display: inline-block;
-    align-self: flex-start;
-    margin-top: 16px;
     padding: 6px 12px;
     background: var(--project-link-bg);
     color: var(--project-link-font-color);

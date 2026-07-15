@@ -1,12 +1,12 @@
 - title: Note-Library
   description: 本项目分享了本人在中山大学计算机学院就读期间的部分学习笔记，以及一些我自己拓展学习的知识笔记。
   url: https://github.com/whY-note/Note-Library
-  stars: 1
+  stars: 4
 
 - title: ML-Lab
   description: Code for Machine Learning experiments in SYSU
   url: https://github.com/whY-note/ML-Lab
-  stars: 0
+  stars: 1
 
 - title: PipelineCPU
   description: Design and Implementation of a Pipelined CPU for a Computer Organization Experiment at SYSU
