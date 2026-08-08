@@ -67,6 +67,7 @@ https://whY-note.github.io
 - [ ] 添加个人logo
 - [ ] logo做一个星空版+一个白天版
 - [ ] 白天版改成羊皮纸风格
+- [ ] 写一个tutorial，用于指导如何对网站进行修改
 
 ## 完成情况
 - [x] sidebar
