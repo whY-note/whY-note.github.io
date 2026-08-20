@@ -1,0 +1,100 @@
+{% assign article_title = page.title | default: "未命名文章" %}
+{% assign article_description = page.description | default: page.excerpt | strip_html | strip_newlines | strip %}
+{% assign article_section = page.kicker | default: page.article_section | default: "Article" %}
+{% assign article_back_url = page.article_back_url | default: "/" %}
+{% assign article_back_label = page.article_back_label | default: "返回首页" %}
+{% assign article_words = content | number_of_words: "cjk" %}
+{% assign article_minutes = article_words | divided_by: 300 %}
+{% if article_minutes < 1 %}{% assign article_minutes = 1 %}{% endif %}
+<!doctype html>
+<html lang="{{ page.lang | default: 'zh-CN' }}">
+<head>
+  <meta charset="utf-8">
+  {% include seo.html %}
+
+  <script src="/assets/js/theme_toggle.js"></script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/article.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  {% if page.math %}
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  {% endif %}
+</head>
+<body class="article-page article-page-{{ page.collection | default: 'general' }}">
+  <a class="skip-link" href="#article-content">跳到正文</a>
+
+  {% include header.html %}
+
+  <div class="article-scroll" id="article-scroll">
+    <div class="reading-progress" aria-hidden="true">
+      <span id="reading-progress-bar"></span>
+    </div>
+
+    <div class="article-shell">
+      <main class="article-column" id="article-content">
+        <a class="article-back" href="{{ article_back_url }}">
+          <span aria-hidden="true">←</span> {{ article_back_label }}
+        </a>
+
+        <article class="article-document">
+          <header class="article-intro">
+            <p class="article-kicker">{{ article_section }}</p>
+            <h1>{{ article_title }}</h1>
+            {% if article_description != "" %}
+            <p class="article-summary">{{ article_description }}</p>
+            {% endif %}
+            <div class="article-meta">
+              {% if page.date %}
+              <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}</time>
+              <span aria-hidden="true">·</span>
+              {% endif %}
+              <span>约 {{ article_minutes }} 分钟阅读</span>
+              {% if page.author %}
+              <span aria-hidden="true">·</span>
+              <span>{{ page.author }}</span>
+              {% endif %}
+            </div>
+          </header>
+
+          <section class="article-body">
+            {{ content }}
+          </section>
+        </article>
+
+        <div class="article-end">
+          <a href="{{ article_back_url }}">{{ article_back_label }}</a>
+        </div>
+      </main>
+
+      <aside class="article-toc" aria-label="文章目录" hidden>
+        <button class="toc-toggle" id="toc-toggle" type="button" aria-expanded="true" aria-controls="toc-panel">
+          <span>目录</span>
+          <span class="toc-toggle-icon" aria-hidden="true"></span>
+        </button>
+        <nav class="toc-panel" id="toc-panel" aria-label="本页目录">
+          <ol class="toc-list" id="toc-list"></ol>
+        </nav>
+      </aside>
+    </div>
+
+    {% include footer.html %}
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/article.js"></script>
+</body>
+</html>

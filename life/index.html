@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Haowen Yan's life room — notes, memories, music, travel and maps.">
+  <title>Life Room | Haowen Yan</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <nav class="room-nav" aria-label="Life room navigation">
+    <a class="back-link" href="/">← Back to Home</a>
+    <span class="room-title">Life Room</span>
+    <span class="room-hint">点击蓝色标记的物品</span>
+  </nav>
+
+  <main id="scene-wrap" aria-label="Interactive life room">
+    <div id="room">
+      <div class="wall wall-back"></div>
+      <div class="wall wall-side"></div>
+      <div class="wall-trim"></div>
+      <div class="floor"></div>
+      <div class="sun-wash" aria-hidden="true"></div>
+
+      <section class="window-scene" aria-label="Window overlooking a sunlit tree">
+        <div class="window-shadow"></div>
+        <div class="window-view">
+          <div class="sun"></div>
+          <div class="sun-ray ray-one"></div>
+          <div class="sun-ray ray-two"></div>
+          <svg class="tree" viewBox="0 0 500 370" aria-hidden="true">
+            <defs>
+              <linearGradient id="trunk" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#7d4c2d"/>
+                <stop offset="1" stop-color="#3f2d25"/>
+              </linearGradient>
+              <filter id="leafGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1a4939" flood-opacity=".22"/>
+              </filter>
+            </defs>
+            <path d="M286 382 C278 304 292 246 276 188 C264 143 235 98 220 54 M278 211 C330 169 362 125 374 78 M272 179 C235 145 191 128 150 119 M292 262 C329 239 370 225 419 224"
+                  fill="none" stroke="url(#trunk)" stroke-width="15" stroke-linecap="round"/>
+            <g fill="#55a978" filter="url(#leafGlow)">
+              <ellipse cx="135" cy="111" rx="55" ry="30" transform="rotate(-18 135 111)"/>
+              <ellipse cx="187" cy="72" rx="58" ry="31" transform="rotate(12 187 72)"/>
+              <ellipse cx="250" cy="65" rx="52" ry="27" transform="rotate(-10 250 65)"/>
+              <ellipse cx="322" cy="84" rx="62" ry="32" transform="rotate(16 322 84)"/>
+              <ellipse cx="382" cy="120" rx="57" ry="29" transform="rotate(-12 382 120)"/>
+              <ellipse cx="166" cy="158" rx="62" ry="31" transform="rotate(10 166 158)"/>
+              <ellipse cx="235" cy="135" rx="67" ry="34" transform="rotate(-8 235 135)"/>
+              <ellipse cx="310" cy="145" rx="64" ry="34" transform="rotate(9 310 145)"/>
+              <ellipse cx="386" cy="177" rx="60" ry="31" transform="rotate(-6 386 177)"/>
+              <ellipse cx="210" cy="207" rx="58" ry="29" transform="rotate(14 210 207)"/>
+              <ellipse cx="337" cy="215" rx="62" ry="31" transform="rotate(-10 337 215)"/>
+              <ellipse cx="425" cy="225" rx="52" ry="26" transform="rotate(12 425 225)"/>
+            </g>
+            <g fill="#9ad099" opacity=".7">
+              <ellipse cx="109" cy="82" rx="25" ry="12"/>
+              <ellipse cx="275" cy="103" rx="28" ry="13"/>
+              <ellipse cx="352" cy="58" rx="23" ry="11"/>
+              <ellipse cx="411" cy="150" rx="26" ry="12"/>
+              <ellipse cx="152" cy="205" rx="22" ry="10"/>
+            </g>
+          </svg>
+        </div>
+        <div class="window-frame frame-top"></div>
+        <div class="window-frame frame-bottom"></div>
+        <div class="window-frame frame-left"></div>
+        <div class="window-frame frame-right"></div>
+        <div class="window-frame frame-mid-v"></div>
+        <div class="window-frame frame-mid-h"></div>
+        <div class="curtain-rod"></div>
+        <div class="curtain curtain-left"><span class="tie"></span></div>
+        <div class="curtain curtain-right"><span class="tie"></span></div>
+        <div class="window-sill"></div>
+      </section>
+
+      <section class="desk" aria-label="Writing desk">
+        <div class="desk-top"></div>
+        <div class="desk-apron"></div>
+        <div class="desk-drawer left"></div>
+        <div class="desk-drawer right"></div>
+        <div class="desk-leg leg-one"></div>
+        <div class="desk-leg leg-two"></div>
+        <div class="desk-leg leg-three"></div>
+        <div class="desk-leg leg-four"></div>
+
+        <div class="desk-lamp" aria-hidden="true">
+          <div class="lamp-shade"></div>
+          <div class="lamp-neck"></div>
+          <div class="lamp-base"></div>
+          <div class="lamp-light"></div>
+        </div>
+
+        <a class="journal interactive-object" data-room-link="reflection" href="#" aria-label="感悟">
+          <span class="journal-page page-left">
+            <i></i><i></i><i></i><i></i>
+          </span>
+          <span class="journal-page page-right">
+            <i></i><i></i><i></i><i></i>
+          </span>
+          <span class="journal-spine"></span>
+          <span class="object-label">感悟</span>
+        </a>
+
+        <div class="tea-cup" aria-hidden="true">
+          <div class="steam steam-one"></div>
+          <div class="steam steam-two"></div>
+          <div class="cup-body"></div>
+          <div class="cup-handle"></div>
+          <div class="saucer"></div>
+        </div>
+      </section>
+
+      <div class="stool" aria-hidden="true">
+        <div class="stool-seat"></div>
+        <div class="stool-leg stool-leg-one"></div>
+        <div class="stool-leg stool-leg-two"></div>
+        <div class="stool-brace"></div>
+      </div>
+
+      <figure class="photo-frame" aria-label="Photo frame">
+        <div class="photo-mat">
+          <div class="photo-art">
+            <span class="photo-sun"></span>
+            <span class="photo-mountain mountain-one"></span>
+            <span class="photo-mountain mountain-two"></span>
+            <span class="photo-person"></span>
+          </div>
+        </div>
+        <figcaption>PHOTO</figcaption>
+      </figure>
+
+      <a class="world-map interactive-object" data-room-link="worldMap" href="#" aria-label="世界地图">
+        <div class="map-paper">
+          <svg viewBox="0 0 360 180" role="img" aria-label="Stylized world map">
+            <rect width="360" height="180" rx="5" fill="#e9dec4"/>
+            <g fill="none" stroke="#b9aa8b" stroke-width=".7" opacity=".45">
+              <path d="M0 45H360M0 90H360M0 135H360"/>
+              <path d="M60 0V180M120 0V180M180 0V180M240 0V180M300 0V180"/>
+            </g>
+            <g fill="#789987" stroke="#536e64" stroke-width="1.5">
+              <path d="M25 37l30-20 39 5 20 17-9 20-26 6-13 21-23-8-8-21z"/>
+              <path d="M79 91l24 10 11 28-15 37-18-11-9-32z"/>
+              <path d="M161 31l26-14 34 9 10 18-17 13-24-3-15 10-21-14z"/>
+              <path d="M184 68l34-10 21 25-7 43-22 26-26-23-11-38z"/>
+              <path d="M224 24l50-14 57 17 19 25-18 24-42 6-29 27-34-13-7-33z"/>
+              <path d="M291 121l27-8 25 16-7 26-31 8-23-19z"/>
+            </g>
+            <g fill="#d16d5b">
+              <circle cx="85" cy="52" r="4"/><circle cx="188" cy="43" r="4"/>
+              <circle cx="270" cy="57" r="4"/><circle cx="314" cy="139" r="4"/>
+            </g>
+          </svg>
+          <span class="map-title">WORLD MAP</span>
+          <span class="map-subtitle">places, paths &amp; memories</span>
+        </div>
+        <span class="object-label">世界地图</span>
+      </a>
+
+      <section class="storage-unit" aria-label="Memory cabinet">
+        <div class="cabinet-top"></div>
+        <div class="upper-shelf">
+          <a class="notes interactive-object" data-room-link="notes" href="#" aria-label="Notes">
+            <span class="book note-one"><i></i></span>
+            <span class="book note-two"><i></i></span>
+            <span class="book note-three"><i></i></span>
+            <span class="object-label">Notes</span>
+          </a>
+        </div>
+        <div class="lower-shelf">
+          <a class="travel-album interactive-object" data-room-link="travelAlbum" href="#" aria-label="旅游相册">
+            <span class="album-spine"></span>
+            <span class="album-cover">
+              <i class="album-photo"></i>
+              <b>JOURNEYS</b>
+            </span>
+            <span class="object-label">旅游相册</span>
+          </a>
+        </div>
+        <div class="cabinet-grid">
+          <div class="cabinet-door"><i></i></div>
+          <div class="cabinet-door"><i></i></div>
+          <div class="cabinet-door"><i></i></div>
+          <div class="cabinet-door"><i></i></div>
+          <div class="cabinet-door wide"><i></i></div>
+          <div class="cabinet-door"><i></i></div>
+        </div>
+        <div class="cabinet-foot foot-left"></div>
+        <div class="cabinet-foot foot-right"></div>
+      </section>
+
+      <a class="record-player interactive-object" data-room-link="music" href="#" aria-label="播放音乐">
+        <span class="player-case">
+          <span class="record"><i></i></span>
+          <span class="tonearm"><i></i></span>
+          <span class="control-knob"></span>
+        </span>
+        <span class="object-label">播放音乐</span>
+      </a>
+
+      <aside class="calligraphy-scroll" aria-label="Calligraphy scroll">
+        <div class="scroll-cap top"></div>
+        <div class="scroll-paper">
+          <span>书</span><span>法</span><span>作</span><span>品</span>
+          <i class="seal">严</i>
+        </div>
+        <div class="scroll-cap bottom"></div>
+      </aside>
+
+      <div class="room-sign" aria-hidden="true">A quiet corner for ordinary days</div>
+    </div>
+  </main>
+
+  <div id="link-toast" role="status" aria-live="polite"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

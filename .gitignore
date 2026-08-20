@@ -19,4 +19,10 @@ _site/
 *.vrb
 *.xdv
 *.dvi
+
+# other
 .DS_Store
+
+# specific
+_life/2026-08-19-kl-divergence.md
+_life/2026-08-19-kl-divergence.assets

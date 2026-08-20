@@ -1,9 +1,12 @@
 
 // 主题切换功能
 (function() {
+	// 主题相关常量
 	var THEME_KEY = 'theme';
 	var STAR_THEME = 'star';
 	var WHITE_THEME = 'white';
+
+	// 主题图标路径
 	var MOON_ICON = '/assets/images/theme/moon.png';
 	var SUN_ICON = '/assets/images/theme/sun.png';
 
