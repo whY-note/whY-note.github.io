@@ -3,7 +3,8 @@
 {% assign article_section = page.kicker | default: page.article_section | default: "Article" %}
 {% assign article_back_url = page.article_back_url | default: "/" %}
 {% assign article_back_label = page.article_back_label | default: "返回首页" %}
-{% assign article_words = content | number_of_words: "cjk" %}
+{% assign article_text = content | strip_html | strip_newlines %}
+{% assign article_words = article_text | size %}
 {% assign article_minutes = article_words | divided_by: 300 %}
 {% if article_minutes < 1 %}{% assign article_minutes = 1 %}{% endif %}
 <!doctype html>

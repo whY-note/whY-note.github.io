@@ -1,68 +1,13 @@
 # whY-note.github.io
 https://whY-note.github.io
 
-## 项目结构
-
-```
-.
-├── _config.yml
-├── _data
-│   ├── blog_tags.yml
-│   ├── education.yml
-│   ├── honors.yml
-│   ├── image_bar.yml
-│   ├── profile.yml
-│   ├── projects.yml
-│   ├── publications.yml
-│   └── research_experience.yml
-├── _includes
-│   ├── footer.html
-│   ├── header.html
-│   ├── seo.html
-│   └── sidebar.html
-├── _layouts
-│   ├── default.html
-│   └── home.html
-├── _site
-│   ├── assets
-│   ├── blog
-│   ├── image_collector.py
-│   ├── index.html
-│   ├── projects
-│   ├── publications
-│   └── README.md
-├── assets
-│   ├── css
-│   ├── CV
-│   ├── images
-│   ├── js
-│   └── video
-├── image_collector.py
-├── index.md
-├── pages
-│   ├── blog.md
-│   ├── projects.md
-│   └── publications.md
-└── README.md
-```
-
-## Life 与 Blog 文章附件
-
-Life 和 Blog 使用不同的 Jekyll Collection，文章与附件按相同名称成对存放：
-
-
-Life 和 Blog 文章文件名必须使用 `yyyy-mm-dd-title.md` 格式。附件文件夹使用完整文件名主体加 `.assets` 命名，例如 `2026-08-19-example.assets/`。附件可以包含图片、视频等静态文件。Life 文章通过 `/life/yyyy-mm-dd-article-slug.assets/image.png` 引用附件，Blog 文章通过 `/blog/yyyy-mm-dd-article-slug.assets/image.png` 引用附件。附件不要添加 YAML Front Matter，否则 Jekyll 可能把它识别成 Collection 文档。
-
-日期前缀只用于源文件和附件管理；文章的公开地址由 Front Matter 中的 `title` 生成，例如 `_life/2026-08-19-kl-divergence.md` 输出到 `/life/kl-divergence/`。
-
 ## 滚动浮现
 
 ### 实现方法
 为了使文字能够在鼠标滚动时，逐渐浮现出来，
 需要将你的markdown文件中的内容用
-`<div> </div>` 或 `<h1> </h1>` 或 `<p> </p>` 或 ... 来包起来
-然后使用
-`data-aos="fade-up"`实现浮现效果。
+`<div> </div>` 或 `<h1> </h1>` 或 `<p> </p>` 或 ... 来包起来,
+然后使用`data-aos="fade-up"`实现浮现效果。
 
 但是，这样会使原本的markdown内容（比如：链接，加粗等）无法正常渲染，只会显示原文本。
 
@@ -137,4 +82,5 @@ Life 和 Blog 文章文件名必须使用 `yyyy-mm-dd-title.md` 格式。附件�
 - [x] theme
 - [x] resume
 - [x] research experience
+- [x] Life
 - [ ] Blog
