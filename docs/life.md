@@ -15,6 +15,8 @@ Life 的源码分布如下：
 - `assets/js/article.js`: 目录与阅读进度交互
 - `_life/yyyy-mm-dd-title.assets/`: 与 Life 文章同名的附件目录
 - `life/index.html`: Life Room 入口页
+- `life/reflection/index.html`: 感悟分类首页，按 `kicker` 自动列出文章
+- `life/reflection/style.css`: 感悟分类首页样式
 
 ## 文章与附件要求
 
@@ -62,6 +64,30 @@ Life 文章支持 GitHub 风格提示块，推荐让类型标记独占第一行�
 
 可用类型及颜色为：`NOTE`（蓝色）、`TIP`（绿色）、`IMPORTANT`（紫色）、`WARNING`（黄色）、`CAUTION`（红色）。紫色提示也兼容 `INFORMATION` 和 `IMFORMATION`，并统一显示为 `Important`。标记与正文同行的写法（如 `> [!WARNING]警告内容`）同样可以渲染。
 
+## Reflection 首页
+
+Life Room 中“感悟”入口会跳转到 `/life/reflection/`。该页面从 `_life` Collection 自动读取文章，并按 `date` 倒序展示。
+
+想让文章显示在 Reflection 首页，需要让文章 Front Matter 的 `kicker` 命中 `life/reflection/index.html` 中的 `allowed_kickers` 列表。当前支持：
+
+```yaml
+kicker: Life · 年终总结
+```
+
+```yaml
+kicker: Life · Moment
+```
+
+```yaml
+kicker: Life · Moments
+```
+
+```yaml
+kicker: Life · reflection
+```
+
+以后如果新增分类，只需要把新的 `kicker` 字符串加入 `allowed_kickers`。
+
 
 ## 开发计划
 
@@ -94,7 +120,7 @@ const ROOM_LINKS = {
   worldMap: "#",
   notes: "#",
   travelAlbum: "#",
-  reflection: "#",
+  reflection: "/life/reflection/",
   music: "#"
 };
 ```
