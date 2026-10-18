@@ -1,7 +1,7 @@
 ---
 title: When the end meets the beginning
 description: 一段实习结束
-kicker: Life · Moments
+kicker: Life · Moment
 date: 2026-05-03
 math: false
 ---
