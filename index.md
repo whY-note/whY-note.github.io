@@ -265,7 +265,7 @@ loading faster -->
         <div class="research_experience-content">
             <p class="research_experience-place">{{ research_experience.place }}</p>
             <p class="research_experience-job"> 
-                {{research_experience.job_title}} - {{ research_experience.job_description }}
+                <em>{{research_experience.job_title}}</em> - {{ research_experience.job_description }}
             </p>
             <p class="research_experience-period">{{ research_experience.period }}</p>
         </div>
