@@ -4,9 +4,9 @@
  */
 const ROOM_LINKS = {
   worldMap: "#",
-  notes: "/life/kl-divergence/",
+  notes: "#",
   travelAlbum: "#",
-  reflection: "#",
+  reflection: "/life/reflection/",
   music: "#"
 };
 

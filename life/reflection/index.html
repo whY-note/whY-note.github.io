@@ -1,0 +1,86 @@
+---
+layout: null
+title: 感悟
+description: Life reflection index.
+permalink: /life/reflection/
+allowed_kickers:
+  - Life · 年终总结
+  - Life · Moment
+  - Life · Moments
+  - Life · reflection
+---
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include seo.html %}
+
+  <script src="/assets/js/theme_toggle.js"></script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/life/reflection/style.css">
+</head>
+<body class="reflection-page">
+  {% include header.html %}
+
+  <div class="reflection-scroll">
+    <main class="reflection-content">
+      <header class="reflection-header">
+        <h1>希望留下路过人间的证据</h1>
+      </header>
+
+      {% assign reflection_articles = site.life | where_exp: "article", "page.allowed_kickers contains article.kicker" | sort: "date" | reverse %}
+      {% assign reflection_years = "" | split: "," %}
+      {% for article in reflection_articles %}
+        {% assign article_year = article.date | date: "%Y" %}
+        {% unless reflection_years contains article_year %}
+          {% assign reflection_years = reflection_years | push: article_year %}
+        {% endunless %}
+      {% endfor %}
+
+      <div class="reflection-body">
+        {% if reflection_years.size > 0 %}
+        <nav class="reflection-timeline" aria-label="按年份浏览文章">
+          <ol>
+            {% for year in reflection_years %}
+            <li><a href="#reflection-year-{{ year }}" data-year="{{ year }}"{% if forloop.first %} aria-current="location"{% endif %}>{{ year }}</a></li>
+            {% endfor %}
+          </ol>
+        </nav>
+        {% endif %}
+
+        <section class="reflection-list" aria-label="感悟文章列表">
+          {% assign previous_year = "" %}
+          {% for article in reflection_articles %}
+          {% assign article_year = article.date | date: "%Y" %}
+          {% if article_year != previous_year %}
+          <p class="reflection-year" id="reflection-year-{{ article_year }}" data-year-start="{{ article_year }}">{{ article_year }}</p>
+          {% endif %}
+          <a class="reflection-card" href="{{ article.url | relative_url }}">
+            <div class="reflection-card-main">
+              <h2>{{ article.title }}</h2>
+              {% if article.description %}
+              <p>{{ article.description }}</p>
+              {% endif %}
+            </div>
+            {% if article.date %}
+            <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%Y.%m.%d" }}</time>
+            {% endif %}
+          </a>
+          {% assign previous_year = article_year %}
+          {% endfor %}
+
+          {% if reflection_articles.size == 0 %}
+          <p class="reflection-empty">暂无感悟文章。</p>
+          {% endif %}
+        </section>
+      </div>
+      {% include footer.html %}
+    </main>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/life/reflection/script.js" defer></script>
+</body>
+</html>

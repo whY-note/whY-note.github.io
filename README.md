@@ -45,7 +45,7 @@ https://whY-note.github.io
 - [x] 解决publications不出现的问题
 - [x] 添加project，并链接到Github
 - [x] github,scholar的图标
-- [ ] 根据academicpages，完善所含有的内容
+- [x] 根据academicpages，完善所含有的内容
 - [x] 添加滚动渐渐出现的效果
 - [x] 解决imagebar不能移动的问题 -->现在image bar里面的图像可以左移或者右移，只需要改参数`direction`
 - [x] 写一个Python脚本，从 `assets/images/image_bar/` 中读取所有图片，然后写入 `_data/image_bar.yml`中
@@ -62,6 +62,9 @@ https://whY-note.github.io
 - [x] navbar加上Home
 - [ ] Blog 含有：Notes（学习笔记），Tech（技术文档）
 - [x] Life 包括：生活感想、风景照片，个人感悟...
+- [x] 去掉Life和Blog文章中的kicker
+- [x] Blog 中的数学公式没有显示出来 -> 即使是Life中的公式也有渲染错误，所以不再用md，改用qmd
+- [x] Life 的index页
 - [ ] image_bar 中的相片风格目前太单一，要加些**比赛**、**写字**等相片，
 - [ ] 添加个人logo
 - [ ] logo做一个星空版+一个白天版
