@@ -1,0 +1,103 @@
+---
+layout: null
+title: Tourism
+description: An interactive atlas of places I have visited.
+permalink: /life/tourism/
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include seo.html %}
+  <script src="/assets/js/theme_toggle.js"></script>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/life/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/life/tourism/style.css">
+</head>
+<body class="tourism-page">
+  {% include header.html %}
+  {% assign places = site.data.travel_places %}
+  {% assign countries = places | map: "country_code" | uniq %}
+
+  <div class="tourism-scroll">
+    <main class="tourism-content">
+      <header class="tourism-header">
+        <a class="tourism-back" href="/life/">Back to Life Room</a>
+        <p class="tourism-eyebrow" lang="en">Travel atlas</p>
+        <h1>Places I Have Been</h1>
+      </header>
+
+      <section class="travel-stats" aria-label="Travel statistics">
+        <article class="travel-stat"><strong>{{ places.size }}</strong><span>{% if places.size == 1 %}Place{% else %}Places{% endif %}</span></article>
+        <article class="travel-stat"><strong>{{ countries.size }}</strong><span>{% if countries.size == 1 %}Country{% else %}Countries{% endif %}</span></article>
+      </section>
+
+      <section class="travel-map-shell" aria-labelledby="map-heading">
+        <header class="travel-section-heading">
+          <div>
+            <p class="tourism-eyebrow" lang="en">Interactive map</p>
+            <h2 id="map-heading">Explore the journey</h2>
+          </div>
+          <button id="reset-map" class="tourism-button" type="button" hidden>Show all</button>
+        </header>
+        <div class="travel-map-layout">
+          <div class="map-frame">
+            <div id="tourism-map" role="region" aria-label="Interactive map of visited places" aria-describedby="map-help"></div>
+            <p id="map-notice" class="map-notice" role="status" hidden></p>
+            <noscript><p class="map-notice">Enable JavaScript to explore the interactive map. You can still read the place list.</p></noscript>
+          </div>
+          <aside class="place-focus" aria-labelledby="selected-name" aria-live="polite" aria-atomic="true">
+            <p class="tourism-eyebrow">Selected place</p>
+            <svg class="place-focus-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M38 20c0 11-14 23-14 23S10 31 10 20a14 14 0 1 1 28 0Z" stroke-width="1.5"/>
+              <circle cx="24" cy="20" r="5" stroke-width="1.5"/>
+            </svg>
+            <p id="selected-name-zh" class="selected-name-zh" lang="zh-CN" hidden></p>
+            <h3 id="selected-name">{% if places.size > 0 %}Select a place{% else %}No places added yet{% endif %}</h3>
+            <p id="selected-country" class="selected-country">{% if places.size > 0 %}Choose a marker or a place below to explore.{% else %}The next journey starts here.{% endif %}</p>
+            <dl id="selected-coordinates" class="place-coordinates" hidden>
+              <div><dt>Latitude</dt><dd id="selected-lat"></dd></div>
+              <div><dt>Longitude</dt><dd id="selected-lng"></dd></div>
+            </dl>
+          </aside>
+        </div>
+        <p id="map-help" class="map-help">Drag to explore. Use the zoom buttons or pinch to zoom. With the map focused, use the arrow keys to move and + / − to zoom.</p>
+      </section>
+
+      <section class="travel-places" aria-labelledby="places-heading">
+        <header class="travel-section-heading">
+          <div>
+            <p class="tourism-eyebrow" lang="en">Places & memories</p>
+            <h2 id="places-heading">Visited places</h2>
+          </div>
+          <span class="place-count">{{ places.size }} {% if places.size == 1 %}place{% else %}places{% endif %}</span>
+        </header>
+        {% if places.size > 0 %}
+        <ul class="place-list">
+          {% for place in places %}
+          <li>
+            <button class="place-card" type="button" data-place-index="{{ forloop.index0 }}" aria-pressed="false" aria-label="Show {% if place.country_code == 'CN' and place.name_zh %}{{ place.name_zh | escape }} {% endif %}{{ place.name | escape }}, {{ place.country | escape }} on the map">
+              <span class="place-card-copy"><strong>{% if place.country_code == 'CN' and place.name_zh %}<span lang="zh-CN">{{ place.name_zh | escape }}</span> {% endif %}{{ place.name | escape }}</strong><span>{{ place.country | escape }}</span></span>
+              <svg class="place-card-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+            </button>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <div class="travel-empty"><p>No places added yet</p><span>New journeys will find their place here.</span></div>
+        {% endif %}
+      </section>
+
+      {% include footer.html %}
+    </main>
+  </div>
+  <script id="tourism-data" type="application/json">{{ places | jsonify | replace: '<', '\u003c' }}</script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/life/tourism/cards.js" defer></script>
+  <script src="/life/vendor/leaflet/leaflet.js" defer></script>
+  <script src="/life/tourism/script.js" defer></script>
+</body>
+</html>

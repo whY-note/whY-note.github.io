@@ -382,7 +382,9 @@ unsupported.events.pointerdown({ target: unsupported.element("room-canvas") });
 assert.equal(unsupported.element("content-menu").open, false);
 assert.equal(unsupported.links[0].href, "/life/reflection/");
 assert(!unsupported.links[0].handlers.click, "Keep normal anchor navigation and modifier-click behavior");
-for (const link of unsupported.links.slice(1)) {
+assert.equal(unsupported.links[3].href, "/life/tourism/");
+assert(!unsupported.links[3].handlers.click, "World Map must keep normal anchor navigation");
+for (const link of unsupported.links.filter((link) => link.href === "#")) {
   let prevented = false;
   link.handlers.click({ preventDefault: () => { prevented = true; } });
   assert(prevented);
@@ -394,6 +396,7 @@ const offline = shell(true);
 await new Promise((resolve) => setImmediate(resolve));
 assert(offline.element("scene-wrap").classList.contains("has-error"), "Failed module imports must reveal the fallback");
 assert.equal(offline.links[0].href, "/life/reflection/");
+assert.equal(offline.links[3].href, "/life/tourism/");
 assert.equal(offline.element("content-menu").open, true);
 
 console.log(JSON.stringify({

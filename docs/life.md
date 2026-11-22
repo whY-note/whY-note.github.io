@@ -89,11 +89,52 @@ kicker: Life · reflection
 以后如果新增分类，只需要把新的 `kicker` 字符串加入 `allowed_kickers`。
 
 
-## 开发计划
+## World Map 旅行足迹
 
-- [x] 制作文章的模版
-- [ ] 制作life的总览，展示所有在life目录下的文章（按时间顺序）
-- [x] 引入“房间”，通过其中的超链接跳转到不同内容
+房间后墙地图与“内容 → 世界地图”均进入 `/life/tourism/`，也可直接访问该地址。
+页面沿用本站星空／白色主题，包含城市与国家统计、交互地图、地点坐标及城市清单。
+点击城市或地图标记会同步选中并定位；“显示全部”恢复全部足迹的总览。
+
+### 添加到访城市
+
+编辑 `_data/travel_places.yml`。目前已填写用户提供的 12 个到访地点，界面与地点名称使用英文。
+地点可以是城市、地区或景区，因此统计标签使用 `Places`。山东和西藏使用地区代表点，
+稻城亚丁使用景区代表点；这些坐标不代表具体游览路线。继续在列表末尾添加，例如（仅展示格式）：
+
+```yaml
+- name: Guangzhou
+  name_zh: 广州
+  country: China
+  country_code: CN
+  coordinates: [23.1291, 113.2644]
+
+- name: Paris
+  country: France
+  country_code: FR
+  coordinates: [48.8566, 2.3522]
+```
+
+- 每个地点填写一次；`name`、`country`、`country_code`、`coordinates` 均为必填项。
+- `name`、`country` 使用英文，供列表和详情展示；中国地点另填 `name_zh`，详情区在英文地名上方显示中文名，地图浮层与标记标题显示为“中文地点名，中国”。其他国家的地点标注使用英文。底图自带地名由底图提供方决定。
+- 可选 `zoom` 控制点击后的缩放级别，默认 `8`；较大的地区可用 `5` 或 `6`，景区可用 `10`。
+- `country_code` 使用一致的 ISO 两位国家代码，国家数按该字段去重。
+- `coordinates` 必须是数字，顺序为 **[纬度, 经度]**；纬度范围 −90 至 90，经度范围 −180 至 180。
+- 城市按数据文件中的顺序展示，首次打开选中第一座城市，地图仍展示全部足迹。
+- 保存并重新生成 Jekyll 后，统计、城市卡片和标记自动同步，无需修改页面脚本。
+
+### 文件与依赖
+
+- `life/tourism/index.html`：Jekyll 页面、共享导航和页脚、静态统计与城市列表。
+- `life/tourism/style.css`、`life/tourism/script.js`：主题、响应式布局和地图联动。
+- `life/tourism/cards.js`：地点卡片统一高度，中英文地名按可用宽度一起缩小并保持单行；窗口或字体变化时重新适配。
+- `life/vendor/leaflet/`：本地托管的 Leaflet 1.9.4，含 BSD-2-Clause 许可证。
+
+地图使用 OpenStreetMap 在线底图并保留署名，不申请定位，不进行在线城市地理编码，
+无需 API 密钥、npm 或后端。底图不可用时，保存的标记与城市坐标仍可浏览；
+地图库未加载时，城市清单仍可点击查看详情。禁用 JavaScript 时可阅读统计和城市清单。
+
+运行 `jekyll serve` 后访问 `http://localhost:4000/life/tourism/` 预览。
+房间入口检查继续使用下方 Life Room 的验证命令。
 
 ---
 ## Life Room
@@ -171,7 +212,7 @@ jekyll serve
 
 ```js
 const ROOM_LINKS = {
-  worldMap: "#",
+  worldMap: "/life/tourism/",
   notes: "#",
   travelAlbum: "#",
   reflection: "/life/reflection/",

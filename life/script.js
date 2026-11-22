@@ -1,6 +1,6 @@
 /* Configure content here. Use "#" for collections that are not ready yet. */
 const ROOM_LINKS = {
-  worldMap: "#",
+  worldMap: "/life/tourism/",
   notes: "#",
   travelAlbum: "#",
   reflection: "/life/reflection/",
