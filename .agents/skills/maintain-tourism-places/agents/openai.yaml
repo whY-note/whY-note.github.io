@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tourism 地点维护"
+  short_description: "维护旅行足迹，统一中英文地名、地图标注与地点卡片布局"
+  default_prompt: "请使用 $maintain-tourism-places 为本站添加或维护旅行地点，并遵守已有的双语命名和卡片布局规则。"
