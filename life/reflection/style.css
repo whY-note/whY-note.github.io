@@ -1,5 +1,13 @@
 /* Reflection index: shared star and white themes, with frosted article surfaces. */
 
+@font-face {
+  font-family: "Noto Serif SC";
+  src: url("/assets/fonts/noto-serif-sc/noto-serif-sc-400-500.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+}
+
 html[data-theme="white"] {
   --reflection-surface: rgba(255, 255, 255, 0.14);
   --reflection-surface-hover: rgba(255, 255, 255, 0.60);
@@ -56,7 +64,7 @@ html[data-theme="star"] .reflection-scroll {
   margin: 36px auto 0;
   padding-bottom: 64px;
   color: var(--color-text);
-  font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", Georgia, serif;
+  font-family: "Noto Serif SC", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", Georgia, serif;
 }
 
 .reflection-header {
@@ -67,9 +75,10 @@ html[data-theme="star"] .reflection-scroll {
 .reflection-header h1 {
   margin: 0;
   color: var(--reflection-heading);
-  font-size: clamp(26px, 2.4vw, 30px);
-  font-weight: 400;
-  line-height: 1.7;
+  font-family: "Xingkai SC", "华文行楷", "Kaiti SC", "STKaiti", "KaiTi", cursive;
+  font-size: clamp(38px, 2vw, 40px);
+  font-weight: 520;
+  line-height: 1.5;
   letter-spacing: 0.08em;
 }
 
@@ -158,10 +167,11 @@ html[data-theme="star"] .reflection-scroll {
 .reflection-card h2 {
   margin: 0;
   color: var(--reflection-title);
-  font-size: clamp(20px, 2vw, 25px);
+  font-size: clamp(19px, 1.85vw, 23px);
   font-weight: 500;
   line-height: 1.45;
   letter-spacing: -0.02em;
+  text-wrap: balance;
   transition: transform 200ms ease;
 }
 
@@ -179,6 +189,7 @@ html[data-theme="star"] .reflection-scroll {
   margin: 10px 0 0;
   color: var(--reflection-summary);
   font-size: 15px;
+  font-weight: 400;
   line-height: 1.75;
 }
 
