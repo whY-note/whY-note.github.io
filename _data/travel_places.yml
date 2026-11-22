@@ -1,0 +1,78 @@
+# 旅行足迹：地图、地点列表和统计共用此文件，按用户提供的顺序展示。
+# coordinates 的顺序为 [纬度, 经度]，示例见 docs/life.md。
+- name: Shunde
+  name_zh: 顺德
+  country: China
+  country_code: CN
+  coordinates: [22.8000, 113.3000]
+
+- name: Guangzhou
+  name_zh: 广州
+  country: China
+  country_code: CN
+  coordinates: [23.1291, 113.2644]
+
+- name: Hong Kong
+  name_zh: 香港
+  country: China
+  country_code: CN
+  coordinates: [22.3193, 114.1694]
+
+- name: Beijing
+  name_zh: 北京
+  country: China
+  country_code: CN
+  coordinates: [39.9042, 116.4074]
+
+- name: Shanghai
+  name_zh: 上海
+  country: China
+  country_code: CN
+  coordinates: [31.2304, 121.4737]
+
+- name: Shenzhen
+  name_zh: 深圳
+  country: China
+  country_code: CN
+  coordinates: [22.5431, 114.0579]
+
+# 山东和西藏按地区代表点标注，不推断具体到访城市。
+# https://en.wikipedia.org/wiki/Shandong
+- name: Shandong
+  name_zh: 山东
+  country: China
+  country_code: CN
+  coordinates: [36.4000, 118.4000]
+  zoom: 6
+
+# https://www.wikidata.org/wiki/Q20611979
+- name: Tibet
+  name_zh: 西藏
+  country: China
+  country_code: CN
+  coordinates: [31.7056, 86.9403]
+  zoom: 5
+
+- name: Chengdu
+  name_zh: 成都
+  country: China
+  country_code: CN
+  coordinates: [30.5728, 104.0668]
+
+# 景区代表点，非稻城县城：https://www.unesco.org/en/mab/yading
+- name: Daocheng Yading
+  name_zh: 稻城亚丁
+  country: China
+  country_code: CN
+  coordinates: [28.3700, 100.2200]
+  zoom: 10
+
+- name: Sydney
+  country: Australia
+  country_code: AU
+  coordinates: [-33.8688, 151.2093]
+
+- name: Perth
+  country: Australia
+  country_code: AU
+  coordinates: [-31.9505, 115.8605]
