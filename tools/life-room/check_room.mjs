@@ -48,6 +48,12 @@ for (const view of gltf.bufferViews) {
 }
 const named = ["Journal", "Notes", "TravelAlbum", "WorldMap", "RecordPlayer"];
 for (const name of named) assert.equal(gltf.nodes.filter((node) => node.name === name).length, 1, `Unique parent: ${name}`);
+const mapNode = gltf.nodes.find((node) => node.name === "WorldMap");
+assert(mapNode.extras.mapSource.startsWith("Natural Earth"), "Use real geographic data for the framed world atlas");
+const mapPrint = gltf.nodes.find((node) => node.name === "Map Natural Earth print");
+assert(mapPrint && gltf.meshes[mapPrint.mesh].primitives.every((primitive) => gltf.accessors[primitive.indices].count === 6), "The printed atlas must retain its lightweight quad geometry");
+assert(gltf.materials.find((material) => material.name === "Map printed paper")?.pbrMetallicRoughness.baseColorTexture, "Pack the real world map print inside the GLB");
+assert(!gltf.nodes.some((node) => /Map (continent|travel pin)/.test(node.name)), "Remove the old invented coastlines and travel pins");
 assert.equal(gltf.cameras?.length || 0, 0, "Camera is controlled by the web page");
 assert((await stat(new URL("../../life/models/room.blend", import.meta.url))).size > 10000);
 const poster = await readFile(new URL("../../life/models/room-preview.webp", import.meta.url));

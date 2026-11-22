@@ -18,6 +18,7 @@ from build_lamp import make_desk_lamp
 from build_record_player import make_record_player
 from build_curtain_hangers import make_curtain_hangers
 from build_curtain_tiebacks import make_curtain_tiebacks
+from build_world_map import make_world_map_artwork
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / "life" / "models"
@@ -334,29 +335,7 @@ world_map.scale.x = .90
 world_map["roomLink"]="worldMap"
 box("Map oak frame",(0,0,0),(1.76,.08,1.05),oak,world_map)
 box("Map paper",(0,-.050,0),(1.63,.012,.92),paper,world_map,.003)
-for i in range(1,7):
-    box("Map longitude",(-.815+i*1.63/7,-.059,0),(.002,.001,.86),cream,world_map,0)
-for z in (-.23,0,.23):
-    box("Map latitude",(0,-.059,z),(1.56,.001,.002),cream,world_map,0)
-# Simplified longitude/latitude coastlines, rather than arbitrary polygon icons.
-continents=[
-    [(-168,72),(-140,70),(-128,60),(-125,49),(-123,37),(-110,27),(-100,20),(-87,16),(-81,8),(-77,9),(-86,22),(-80,26),(-81,31),(-70,44),(-57,52),(-63,60),(-86,68),(-100,73),(-130,70)],
-    [(-54,59),(-30,68),(-20,80),(-44,84),(-62,76)],
-    [(-81,12),(-69,10),(-60,5),(-50,0),(-35,-6),(-43,-23),(-52,-34),(-65,-55),(-74,-45),(-76,-25),(-81,-5)],
-    [(-17,35),(0,37),(13,32),(33,31),(43,12),(51,12),(42,-6),(34,-22),(20,-35),(10,-20),(9,-4),(-5,5),(-15,12)],
-    [(-10,36),(-10,44),(-5,49),(-8,56),(6,58),(10,70),(30,71),(50,67),(90,76),(140,70),(180,66),(170,55),(150,50),(140,38),(130,33),(122,20),(112,8),(104,0),(98,15),(88,22),(78,8),(70,23),(57,26),(49,14),(41,13),(35,30),(29,40),(19,40),(11,44),(0,38)],
-    [(113,-22),(119,-17),(130,-12),(141,-15),(153,-27),(146,-39),(128,-34),(114,-35)],
-    [(166,-34),(178,-38),(174,-46),(167,-45)],
-    [(48,-13),(50,-17),(47,-25),(44,-22)]
-]
-leaf.use_backface_culling=False
-for points in continents:
-    mesh=bpy.data.meshes.new("Continent")
-    mesh.from_pydata([(lon/180*.78,-.068,lat/90*.40) for lon,lat in points],[],[list(range(len(points)))])
-    obj=bpy.data.objects.new("Map continent",mesh)
-    bpy.context.collection.objects.link(obj); obj.parent=world_map; mesh.materials.append(leaf)
-for lon,lat in [(-100,40),(15,48),(105,30)]:
-    sphere("Map travel pin",(lon/180*.78,-.077,lat/90*.40),(.018,.008,.018),clay,world_map)
+make_world_map_artwork(world_map)
 
 # Full portrait; retain the frame's top/side edges and its existing border widths.
 photo=group("PhotoFrame",(.22,1.71,2.62))

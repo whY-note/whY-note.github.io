@@ -159,6 +159,9 @@ Life Room 是铺满整个浏览器视口的 Three.js 三维入口页。默认从
 - `assets/images/life_room/Leslie_poster.png`：相框照片源图，生成器按项目相对路径读取；Blender 中使用相对路径并打包，GLB 内嵌照片纹理。照片按原比例完整展示，相框上边缘和左右边缘固定，下边缘随照片比例调整，并保留木框和白色衬纸的边距。
 - `life/models/curtain-ao.png`：窗帘褶缝的局部遮蔽烘焙图，也已打包进 GLB，运行时无需单独请求。
 - `tools/life-room/build_room.py`：重新制作初始房间并导出上述三个资产。
+- `tools/life-room/build_world_map.py`：按 Natural Earth 真实海岸线生成 Equal Earth 投影世界地图，保留木框、纸张和点击父级；可单独更新现有房间。
+- `tools/life-room/data/ne_110m_land.geojson`：Natural Earth 官方 v5.1.2 发布中的 1:110m 陆地数据（公有领域），来源和使用说明见同目录 README。
+- `life/models/world-map.png`：由真实海岸线与经纬网渲染的 2048 像素地图印刷贴图，大陆白色、海洋天蓝色（`#87CEEB`），保留纸张边距并去掉下方来源字样；已打包进 Blender / GLB，网页中仅增加两个三角面，仍随房间灯光明暗变化。
 - `tools/life-room/build_teacup.py`：白瓷金边茶杯及配套杯碟；`height_scale` 调整杯身和把手高度，保留杯碟尺寸。
 - `tools/life-room/build_lamp.py`：黑色金属折臂台灯，包括双杆支架、弹簧、关节、开放式灯罩和电线。
 - `tools/life-room/build_record_player.py`：木纹唱片机、前格栅、银边转盘、唱臂和茶色透明防尘盖。
@@ -268,6 +271,16 @@ GLB、Selected Objects、Apply Modifiers、Custom Properties、+Y Up；保留材
 腰部使用包覆褶皱的亚麻布质束带，颜色为略深于窗帘的浅杏色（`#D9BC9C`），带有柔和下垂和布料厚度。
 窗帘仍接收实时光照、投影与交互视角变化。
 模型调整后重新渲染正面预览，避免加载前后的布局不一致。
+
+后墙世界地图使用真实海岸线，包含大陆、主要岛屿及南极洲，经纬网与陆地使用同一 Equal Earth 投影；
+地图绘制补偿了现有木框的横向缩放，保持地理比例，替换了原手绘大陆轮廓和虚构旅行图钉。
+如果只更新地图，在已保存的房间上执行以下命令，不重建其余家具：
+
+```bash
+blender --background life/models/room.blend --python tools/life-room/build_world_map.py
+```
+
+该命令同步保存 `.blend`、导出 `.glb` 并渲染加载预览。海岸线数据只用于构建，访客不请求额外地理数据或地图服务。
 
 只有需要重新生成初始设计时，才从仓库根目录运行（会覆盖三个模型资产）：
 
