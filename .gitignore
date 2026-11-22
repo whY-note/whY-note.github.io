@@ -20,6 +20,9 @@ _site/
 *.xdv
 *.dvi
 
+# python
+__pycache__/
+
 # other
 .DS_Store
 
