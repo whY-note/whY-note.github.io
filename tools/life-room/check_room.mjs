@@ -339,12 +339,12 @@ assert(!lighting.update(performance.now(), true));
 assert.equal(lamp.intensity, 6.5, "Reduced motion finishes the transition immediately");
 lighting.dispose();
 
-// Exercise the browser-independent shell: real hrefs must survive a GPU/module
-// failure and unfinished collections must not navigate or pretend to play audio.
+// Exercise the browser-independent shell without the removed content menu.
 const shellSource = await readFile(new URL("../../life/script.js", import.meta.url), "utf8");
 function shell(importMaps) {
   const elements = new Map();
   function element(id) {
+    assert.notEqual(id, "content-menu", "The shell must not depend on the removed menu");
     if (!elements.has(id)) {
       const classes = new Set();
       elements.set(id, {
@@ -359,51 +359,29 @@ function shell(importMaps) {
     }
     return elements.get(id);
   }
-  const links = ["reflection", "notes", "travelAlbum", "worldMap", "music"].map((key) => {
-    const link = element(key);
-    link.dataset = { roomLink: key };
-    return link;
-  });
   const navigation = [];
   const events = {};
   const context = vm.createContext({
     HTMLScriptElement: { supports: () => importMaps },
-    document: { getElementById: element, querySelector: element, querySelectorAll: () => links, addEventListener(type, handler) { events[type] = handler; } },
+    document: { getElementById: element, querySelector: element, addEventListener(type, handler) { events[type] = handler; } },
     window: { location: { assign: (href) => navigation.push(href) } },
     console: { error() {}, warn() {} }, setTimeout: () => 1, clearTimeout() {}
   });
   new vm.Script(shellSource, { importModuleDynamically: () => Promise.reject(new Error("Offline module")) }).runInContext(context);
-  return { element, links, navigation, events };
+  return { element, navigation, events };
 }
 const unsupported = shell(false);
 assert(unsupported.element("scene-wrap").classList.contains("has-error"));
 assert.equal(unsupported.element("scene-wrap").attrs["aria-busy"], "false");
-assert.equal(unsupported.element("content-menu").open, true);
 assert.equal(unsupported.element("room-canvas").tabIndex, -1);
-unsupported.events.keydown({ key: "Escape" });
-assert.equal(unsupported.element("content-menu").open, false);
-assert.equal(unsupported.element("content-menu:summary").focused, true);
-unsupported.element("content-menu").open = true;
-unsupported.events.pointerdown({ target: unsupported.element("room-canvas") });
-assert.equal(unsupported.element("content-menu").open, false);
-assert.equal(unsupported.links[0].href, "/life/reflection/");
-assert(!unsupported.links[0].handlers.click, "Keep normal anchor navigation and modifier-click behavior");
-assert.equal(unsupported.links[3].href, "/life/tourism/");
-assert(!unsupported.links[3].handlers.click, "World Map must keep normal anchor navigation");
-for (const link of unsupported.links.filter((link) => link.href === "#")) {
-  let prevented = false;
-  link.handlers.click({ preventDefault: () => { prevented = true; } });
-  assert(prevented);
-  assert(unsupported.element("link-toast").classList.contains("show"));
-  assert(unsupported.element("link-toast").textContent.includes("还在整理中"));
-}
+assert(unsupported.element("loading-text").textContent.includes("当前浏览器暂不支持"));
 assert.equal(unsupported.navigation.length, 0);
 const offline = shell(true);
 await new Promise((resolve) => setImmediate(resolve));
 assert(offline.element("scene-wrap").classList.contains("has-error"), "Failed module imports must reveal the fallback");
-assert.equal(offline.links[0].href, "/life/reflection/");
-assert.equal(offline.links[3].href, "/life/tourism/");
-assert.equal(offline.element("content-menu").open, true);
+assert.equal(offline.element("scene-wrap").attrs["aria-busy"], "false");
+assert.equal(offline.element("room-canvas").tabIndex, -1);
+assert(offline.element("loading-text").textContent.includes("请刷新重试"));
 
 console.log(JSON.stringify({
   status: "PASS", modelKB: Math.round(bytes.length / 1024), meshCount: meshes.length,
@@ -413,7 +391,7 @@ console.log(JSON.stringify({
   curtains: "dense smooth folds, dedicated physical fabric, embedded occlusion atlas",
   daylight: "window bounds, sun/moon/stars, lamp beam, transitions, restoration and reduced motion",
   furnitureFit: "desk against wall, separate legs, flush shelves and shared upright",
-  shellFallbacks: "unsupported import maps, failed module, placeholder links",
+  shellFallbacks: "unsupported import maps and failed module without content menu",
   cameraFramingScenarios: framingScenarios,
   packedTextures: (JSON.parse(bytes.toString("utf8", 20, 20 + jsonLength)).images || []).length,
   boundsMetres: size.toArray().map((v) => +v.toFixed(2))

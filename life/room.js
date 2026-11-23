@@ -31,7 +31,7 @@ export async function initialiseRoom({ activate, unavailable }) {
     renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: "low-power" });
   } catch (error) {
     console.warn("WebGL unavailable:", error);
-    unavailable("当前设备暂不支持三维房间，可通过“内容”菜单继续浏览。");
+    unavailable("当前设备暂不支持三维房间，请使用支持 WebGL 的设备或浏览器打开。");
     return;
   }
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -332,7 +332,7 @@ export async function initialiseRoom({ activate, unavailable }) {
   }, { signal: abort.signal });
   canvas.addEventListener("webglcontextlost", (event) => {
     event.preventDefault();
-    fail("三维视图已暂停，请刷新重试，或通过“内容”菜单继续浏览。");
+    fail("三维视图已暂停，请刷新重试。");
   });
   const observer = new ResizeObserver(resize);
   observer.observe(stage);
@@ -419,6 +419,6 @@ export async function initialiseRoom({ activate, unavailable }) {
   } catch (error) {
     if (disposed) return;
     console.error("Life Room model could not load:", error);
-    fail("房间暂时未能加载，可通过“内容”菜单继续浏览。");
+    fail("房间暂时未能加载，请刷新重试。");
   } finally { clearTimeout(timeout); }
 }

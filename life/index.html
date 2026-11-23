@@ -17,21 +17,11 @@
     <h1 id="room-heading" class="sr-only">Haowen 的生活房间</h1>
     <img id="room-poster" class="room-poster" src="./models/room-preview.webp" alt="阳光照进左侧窗户，窗下是书桌；后墙依次挂着照片、地图和书法，右侧高低柜上摆着书本、相册和唱片机" width="1500" height="1000">
     <canvas id="room-canvas" aria-label="可交互的三维房间" aria-describedby="room-help" tabindex="0"></canvas>
-    <p id="room-help" class="sr-only">桌面拖动可小幅环视，手机竖屏左右拖动查看房间，滚轮或双指缩放。点击物品打开内容。聚焦画布后，方向键调整视野，加减键缩放，Home 恢复视角。也可通过右上角的“内容”菜单访问各入口。</p>
+    <p id="room-help" class="sr-only">桌面拖动可小幅环视，手机竖屏左右拖动查看房间，滚轮或双指缩放。点击物品打开内容。聚焦画布后，方向键调整视野，加减键缩放，Home 恢复视角。</p>
     <div id="loading-status" class="loading-status" role="status" aria-live="polite"><span class="loading-dot" aria-hidden="true"></span><span id="loading-text">正在打开房间…</span></div>
   </main>
 
   <a class="back-link glass" href="/">返回主页</a>
-  <details id="content-menu" class="content-menu" open>
-    <summary class="glass">内容</summary>
-    <nav class="room-links glass" aria-label="生活内容快捷入口">
-      <a href="/life/reflection/" data-room-link="reflection">感悟<span lang="en">Journal</span></a>
-      <a href="#" data-room-link="notes">笔记<span lang="en">Notes</span></a>
-      <a href="#" data-room-link="travelAlbum">旅游相册<span lang="en">Journeys</span></a>
-      <a href="/life/tourism/" data-room-link="worldMap">世界地图<span lang="en">Places</span></a>
-      <a href="#" data-room-link="music">音乐<span lang="en">Records</span></a>
-    </nav>
-  </details>
   <div class="scene-toolbar" role="group" aria-label="房间视角控制" hidden>
     <p class="gesture-hint">小幅拖动环视 · 滚轮缩放 · 点击物品</p>
     <div class="toolbar-buttons glass">
@@ -43,7 +33,7 @@
     </div>
   </div>
   <div id="link-toast" role="status" aria-live="polite"></div>
-  <noscript><p class="noscript-message glass">三维交互需要 JavaScript，可通过右上角“内容”菜单继续浏览。</p></noscript>
+  <noscript><p class="noscript-message glass">三维交互需要 JavaScript，请启用后刷新页面。</p></noscript>
   <script src="./script.js" defer></script>
 </body>
 </html>

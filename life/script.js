@@ -13,18 +13,7 @@ const ROOM_LINKS = {
   const status = document.getElementById("loading-status");
   const statusText = document.getElementById("loading-text");
   const toast = document.getElementById("link-toast");
-  const menu = document.getElementById("content-menu");
   const canvas = document.getElementById("room-canvas");
-  menu.open = false;
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && menu.open) {
-      menu.open = false;
-      menu.querySelector("summary").focus();
-    }
-  });
-  document.addEventListener("pointerdown", (event) => {
-    if (menu.open && !menu.contains(event.target)) menu.open = false;
-  });
   let toastTimer;
 
   function showToast(message) {
@@ -43,25 +32,11 @@ const ROOM_LINKS = {
     window.location.assign(target);
   }
 
-  document.querySelectorAll("[data-room-link]").forEach((link) => {
-    const key = link.dataset.roomLink;
-    const target = ROOM_LINKS[key] || "#";
-    link.href = target;
-    if (target === "#") {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        menu.open = false;
-        activate(key);
-      });
-    }
-  });
-
   function unavailable(message) {
     stage.classList.remove("is-ready");
     stage.classList.add("has-error");
     stage.setAttribute("aria-busy", "false");
     document.querySelector(".scene-toolbar").hidden = true;
-    menu.open = true;
     canvas.tabIndex = -1;
     status.hidden = false;
     statusText.textContent = message;
@@ -85,7 +60,7 @@ const ROOM_LINKS = {
   }).catch((error) => console.warn("Room daylight clock could not start:", error));
 
   if (!HTMLScriptElement.supports?.("importmap")) {
-    unavailable("当前浏览器暂不支持三维房间，可通过“内容”菜单继续浏览。");
+    unavailable("当前浏览器暂不支持三维房间，请使用支持 WebGL 的现代浏览器打开。");
     return;
   }
 
@@ -93,6 +68,6 @@ const ROOM_LINKS = {
     .then(({ initialiseRoom }) => initialiseRoom({ activate, unavailable }))
     .catch((error) => {
       console.error("Life Room could not start:", error);
-      unavailable("三维房间暂时未能打开，可通过“内容”菜单继续浏览。");
+      unavailable("三维房间暂时未能打开，请刷新重试。");
     });
 })();
